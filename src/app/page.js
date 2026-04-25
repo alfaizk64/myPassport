@@ -47,7 +47,7 @@ const SERVICES = [
     ],
     normal: "15–21 Days",
     fast: "1–3 Days (Tatkal)",
-    price: "Starting ₹799",
+    price: "Starting ₹2000",
   },
   {
     id: "pan",
@@ -95,7 +95,7 @@ const SERVICES = [
     ],
     normal: "15–30 Days",
     fast: "Priority Slot",
-    price: "Starting ₹599",
+    price: "Starting ₹3500",
   },
 ];
 
@@ -894,6 +894,7 @@ export default function IqbalKhanPage() {
               className={`vu ${svcIn ? "in" : ""}`}
               style={{ textAlign: "center", marginBottom: 52 }}
             >
+              
               <span
                 style={{
                   display: "inline-block",
