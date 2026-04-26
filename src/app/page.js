@@ -47,7 +47,7 @@ const SERVICES = [
     ],
     normal: "15–21 Days",
     fast: "1–3 Days (Tatkal)",
-    price: "Starting ₹2000",
+    price: "Starting ₹2500",
   },
   {
     id: "pan",
