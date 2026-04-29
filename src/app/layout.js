@@ -1,10 +1,11 @@
 export const metadata = {
- metadataBase: new URL("https://my-passport-delta.vercel.app"),
+  metadataBase: new URL("https://my-passport-delta.vercel.app"),
   title: {
-    default: "Iqbal Khan — Passport, PAN Card & DL Consultant Dewas | इक़बाल खान",
+    default:
+      "Iqbal Khan — Passport, PAN Card & DL Consultant Dewas | इक़बाल खान",
     template: "%s | Iqbal Khan Passport Consultant Dewas",
   },
-   verification: {
+  verification: {
     google: "u0KGSVnKAEW7gyRvCt_pgQ6k6i7chWW3ab6JuXnvE-U",
   },
   description:
@@ -28,7 +29,9 @@ export const metadata = {
     "7000839816 passport",
     "9827526564 passport Dewas",
   ],
-  authors: [{ name: "Iqbal Khan", url: "https://my-passport-delta.vercel.app" }],
+  authors: [
+    { name: "Iqbal Khan", url: "https://my-passport-delta.vercel.app" },
+  ],
   creator: "Iqbal Khan Passport Consultant",
   publisher: "Iqbal Khan",
   alternates: {
@@ -121,7 +124,14 @@ const jsonLd = {
       openingHoursSpecification: [
         {
           "@type": "OpeningHoursSpecification",
-          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          dayOfWeek: [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+          ],
           opens: "09:00",
           closes: "20:00",
         },
@@ -141,9 +151,18 @@ const jsonLd = {
         "@type": "OfferCatalog",
         name: "Document Services",
         itemListElement: [
-          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Passport Application" } },
-          { "@type": "Offer", itemOffered: { "@type": "Service", name: "PAN Card" } },
-          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Driving Licence" } },
+          {
+            "@type": "Offer",
+            itemOffered: { "@type": "Service", name: "Passport Application" },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: { "@type": "Service", name: "PAN Card" },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: { "@type": "Service", name: "Driving Licence" },
+          },
         ],
       },
     },
@@ -176,14 +195,24 @@ export default function RootLayout({ children }) {
     <html lang="en-IN">
       <head>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=5"
+        />
         <meta name="theme-color" content="#0A0A0F" />
         <meta name="format-detection" content="telephone=yes" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Bebas+Neue&family=Fira+Code:wght@400;500;700&display=swap"
           rel="stylesheet"
