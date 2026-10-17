@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Iqbal Khan Passport Consultant
 
-## Getting Started
+Single-page site for passport, PAN card and driving licence assistance in Dewas, built with Next.js (App Router), Motion and Lucide icons.
 
-First, run the development server:
+## Where to edit things
+
+| What | File |
+| --- | --- |
+| Phones, address, hours, geo, reviews, rating, years, photos | `src/lib/site.js` |
+| Service lists, starting prices, timelines, steps, FAQs | `src/lib/content.js` |
+| Colours and styling (SRS tokens) | `src/app/globals.css` |
+| Page titles, descriptions, structured data | `src/app/layout.js`, `src/lib/seo.js` |
+
+Facts that are not yet confirmed are `null` in `site.js` and are simply not shown. Set `experienceSince`, `clientsServed`, `googleRating`, `googleProfileUrl`, `reviews` or `photos` once they can be backed up. Rating and hours also flow into the structured data.
+
+## Environment variables
+
+- `NEXT_PUBLIC_SITE_URL`: production domain, used for canonical URLs, sitemap and Open Graph. Defaults to the Vercel URL.
+- `NEXT_PUBLIC_GA_ID`: Google Analytics measurement ID. Nothing is loaded when it is unset. Events sent: `whatsapp_click`, `phone_click`, `directions_click`, `faq_expand` (no phone numbers or message text).
+
+## Commands
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev     # local development
+npm run build   # production build
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deploy and rollback
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deploys from `main` on Vercel. To roll back, promote the previous deployment in the Vercel dashboard.
