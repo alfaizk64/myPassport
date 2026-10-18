@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { Check, ExternalLink, Star } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, Check, ExternalLink, Star } from "lucide-react";
 import { CallButton, WhatsAppButton } from "@/components/Cta";
 import Faq from "@/components/Faq";
 import Icon from "@/components/Icon";
@@ -18,6 +19,7 @@ import { ADDRESS_ONE_LINE, DEFAULT_WA_MESSAGE, SITE, telLink } from "@/lib/site"
 /* ───────── Trust strip: static, verified facts only ───────── */
 export function TrustStrip() {
   const items = [
+    { icon: "Gavel", t: "Court case passport specialist", s: "Pending case mein bhi sahi guidance" },
     { icon: "MapPin", t: "Local office in Dewas", s: "L-55 Supermarket, Dewas, MP" },
     { icon: "FileCheck", t: "Passport, PAN aur licence", s: "Guidance aur application help" },
     { icon: "Scale", t: "Fees pehle se clear", s: "Starting prices dikhaye, kaam se pehle confirm" },
@@ -91,6 +93,62 @@ export function ServiceCards() {
         </Reveal>
         <Reveal>
           <ServiceExplorer items={items} />
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+/* ───────── Court case passport: the owner's specialty ───────── */
+export function SpecialistBand() {
+  return (
+    <section className="section section--tight" aria-labelledby="spec-h">
+      <div className="container">
+        <Reveal className="spec">
+          <Icon name="Gavel" size={280} className="spec__mark" strokeWidth={1} />
+          <div className="spec__copy">
+            <p className="spec__tag">
+              <Icon name="Gavel" size={16} />
+              Specialist service
+            </p>
+            <SectionTitle id="spec-h" text="Court case passport: hamari specialty" />
+            <p>
+              Court mein case pending hone ki wajah se passport atak gaya ya reject hua?
+              Hum aapke vakeel ke saath milkar passport ki side sambhalte hain: court order
+              ka sahi use, documents, application aur appointment.
+            </p>
+            <p className="note">
+              Hum vakeel nahi hain aur approval ki guarantee nahi dete. Final faisla court
+              aur passport authority ka hota hai.
+            </p>
+            <div className="hero__cta">
+              <WhatsAppButton
+                location="specialist-band"
+                service="passport"
+                className="btn btn--navy btn--lg"
+                message="Hello, mujhe court case ke saath passport ke baare mein guidance chahiye."
+              >
+                Court case ke baare mein puchhein
+              </WhatsAppButton>
+              <Link href="/passport-services-dewas/court-case-passport/" className="btn btn--white btn--lg">
+                Poori detail dekhein
+                <ArrowRight className="arrow" size={20} aria-hidden="true" />
+              </Link>
+            </div>
+          </div>
+          <ul className="spec__list">
+            {[
+              "Pending criminal case mein passport ka sahi route",
+              "Court order mein kya hona chahiye, vakeel ke saath guidance",
+              "Application mein case ki details sahi tarah bharna",
+              "Appointment aur verification ki poori taiyari",
+            ].map((t) => (
+              <li key={t}>
+                <Check size={18} aria-hidden="true" />
+                {t}
+              </li>
+            ))}
+          </ul>
         </Reveal>
       </div>
     </section>

@@ -1501,3 +1501,25 @@ body { padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px)); }
 /* qr: keep the code exactly centered in its card */
 .rv__qr > div { width: min(220px, 100%); }
 .rv__qr svg { width: 100%; height: auto; margin: 0; }
+
+/* court case passport: highlighted specialty */
+.btn--white { --bg: #fff; --fg: var(--navy); }
+.btn--white:hover { --bg: var(--ivory); }
+.spec { position: relative; display: grid; gap: clamp(20px, 4vw, 48px); align-items: center; overflow: hidden; padding: clamp(1.5rem, 4vw, 3rem); border-radius: 28px; background: linear-gradient(135deg, #f6a56a, var(--saffron) 55%, #c85f20); color: var(--navy-deep); box-shadow: var(--shadow-lg); }
+.spec__mark { position: absolute; right: -50px; bottom: -70px; opacity: 0.14; transform: rotate(-14deg); pointer-events: none; }
+.spec__copy { position: relative; display: grid; gap: 1rem; min-width: 0; }
+.spec h2 { color: var(--navy-deep); }
+.spec__tag,
+.spec-tag { display: inline-flex; align-items: center; gap: 0.5rem; width: fit-content; padding: 0.4rem 0.9rem; border-radius: 999px; font-weight: 800; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.spec__tag { background: var(--navy); color: #fff; }
+.spec-tag { background: var(--saffron); color: var(--navy-deep); }
+.spec .note { color: rgba(14, 29, 56, 0.85); font-weight: 600; }
+.spec__list { position: relative; display: grid; gap: 0.8rem; padding: 1.3rem 1.4rem; border-radius: var(--radius); background: rgba(255, 255, 255, 0.92); box-shadow: var(--shadow-md); }
+.spec__list li { display: flex; gap: 0.7rem; align-items: flex-start; color: var(--navy); font-weight: 600; line-height: 1.45; }
+.spec__list svg { flex: none; margin-top: 0.15rem; color: var(--green); }
+@media (min-width: 900px) { .spec { grid-template-columns: 1.15fr 0.85fr; } }
+.xp__chips a.is-hot { background: var(--white); color: var(--navy-deep); box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.55); }
+.xp__chips a.is-hot:hover { background: #fff; transform: translateY(-2px); }
+.xp__chips a em { font-style: normal; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.15rem 0.45rem; border-radius: 999px; background: var(--saffron); color: var(--navy-deep); }
+.tile--hot { border-color: var(--saffron); box-shadow: 0 0 0 2px rgba(232, 120, 53, 0.35), var(--shadow-md); }
+.tile__tag { width: fit-content; padding: 0.2rem 0.6rem; border-radius: 999px; background: var(--saffron); color: var(--navy-deep); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }

@@ -27,12 +27,14 @@ export const SERVICES = [
     icon: "Plane",
     tone: "navy",
     summary:
-      "Fresh application se renewal tak, minor se adult tak, lost se re-issue tak. Appointment booking aur Tatkal guidance bhi.",
+      "Fresh application se renewal tak, lost se re-issue tak. Court case passport mein specialist. Appointment booking aur Tatkal guidance bhi.",
     items: [
       { title: "Fresh application", text: "Pehli baar passport banwana hai? Sahi type, document check aur form filling mein madad." },
       { title: "Renewal and re-issue", text: "Expire hone wala, expire ho chuka, kho gaya ya kharab passport, aur details change karwane ke liye." },
       { title: "Tatkal / emergency", text: "Aap eligible hain ya nahi, kaun se extra documents lagenge aur appointment kaise milta hai." },
       { title: "Minor passport", text: "18 saal se kam ke liye documents, parents ki consent aur poora process." },
+      { title: "Lost passport", text: "Passport kho gaya, chori hua ya kharab hua: report, documents aur re-issue application." },
+      { title: "Court case passport (specialist)", text: "Pending court case ke saath passport: court order, documents aur application, hamari specialty." },
       { title: "Appointment booking", text: "Slot chunna aur verification, photo aur biometrics ki taiyari." },
       { title: "Status tracking", text: "Application kahan tak pahunchi, aur har stage par aapko kya karna hai." },
     ],
@@ -207,6 +209,14 @@ export const FAQS = [
     a: "Muskan Beauty Palace, L-55 Supermarket, Dewas, Madhya Pradesh. Phone: +91 7000 839816 ya +91 9827526564, ya seedha WhatsApp karein.",
   },
   {
+    q: "Court case chal raha hai to kya passport ban sakta hai?",
+    a: "Aam taur par haan, lekin court ki permission ke saath. Court case wale passport hamari specialty hai: hum aapke vakeel ke saath milkar documents, court order ka sahi use aur application sambhalte hain. Hum vakeel nahi hain, aur final faisla court aur passport authority ka hota hai.",
+  },
+  {
+    q: "Passport kho gaya to kya karein?",
+    a: "Sabse pehle police ko report karein aur copy rakhein. Phir hum batate hain ki re-issue application aur documents kaise taiyar karne hain. Lost passport ki official fee alag hoti hai aur authority tay karti hai.",
+  },
+  {
     q: "PAN card mein galti hai, kya ho sakta hai?",
     a: "Bilkul, correction ho sakta hai. Name, DOB, address ya photo, sab sahi karwa sakte hain, bas supporting documents chahiye. PAN number wahi rehta hai. Aap bataiye kya galat hai, hum batayenge Aadhaar aur purane PAN ke saath aur kya lagega.",
   },
@@ -241,6 +251,8 @@ export const FAQS = [
 ];
 
 export const FOOTER_SERVICE_LINKS = [
+  { label: "Court case passport (specialist)", href: "/passport-services-dewas/court-case-passport/" },
+  { label: "Lost passport help", href: "/passport-services-dewas/lost-passport/" },
   { label: "Fresh passport", href: "/passport-services-dewas/fresh-passport/" },
   { label: "Passport renewal and re-issue", href: "/passport-services-dewas/renewal-reissue/" },
   { label: "Tatkal passport guidance", href: "/passport-services-dewas/tatkal/" },

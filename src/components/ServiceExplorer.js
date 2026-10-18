@@ -52,8 +52,9 @@ export default function ServiceExplorer({ items }) {
                 <ul className="xp__chips">
                   {s.chips.map((c) => (
                     <li key={c.path}>
-                      <Link href={c.path}>
+                      <Link href={c.path} className={c.badge ? "is-hot" : undefined}>
                         {c.title}
+                        {c.badge && <em>{c.badge}</em>}
                         <ArrowUpRight size={15} aria-hidden="true" />
                       </Link>
                     </li>

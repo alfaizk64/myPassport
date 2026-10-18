@@ -8,6 +8,7 @@ import {
   HowItWorks,
   Reviews,
   ServiceCards,
+  SpecialistBand,
   TrustStrip,
   Visit,
 } from "@/components/Sections";
@@ -27,6 +28,7 @@ export default function Home() {
       <Hero />
       <TrustStrip />
       <ServiceCards />
+      <SpecialistBand />
       <About />
       <HowItWorks />
       <Reviews />

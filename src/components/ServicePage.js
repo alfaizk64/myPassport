@@ -14,6 +14,7 @@ import { SITE } from "@/lib/site";
 
 export default function ServicePage({ page }) {
   const svc = SERVICES.find((s) => s.id === page.service);
+  const timeline = page.timeline ?? svc.timeline;
   const overview = getOverview(page.service);
   const trail = [{ name: "Home", path: "/" }];
   if (page.kind === "service") trail.push({ name: overview.label, path: overview.path });
@@ -32,6 +33,12 @@ export default function ServicePage({ page }) {
           <div className="phero__grid">
             <div className="phero__copy">
               <p className="eyebrow">{svc.name}</p>
+              {page.specialist && (
+                <p className="spec-tag">
+                  <Icon name="Gavel" size={16} />
+                  Specialist service
+                </p>
+              )}
               <h1>{page.h1}</h1>
               <span className="hi" lang="hi">{page.hindi}</span>
               {page.intro.map((p) => (
@@ -65,7 +72,7 @@ export default function ServicePage({ page }) {
                 <div>
                   <dt><Icon name="Clock" size={18} /> Typical timeline</dt>
                   <dd>
-                    <strong>{svc.timeline.normal} · {svc.timeline.fast}</strong>
+                    <strong>{timeline.normal} · {timeline.fast}</strong>
                     <small>Authority tay karti hai, guarantee nahi.</small>
                   </dd>
                 </div>
@@ -107,10 +114,11 @@ export default function ServicePage({ page }) {
                 <Stagger className="tiles tiles--tight">
                   {guides.map((g) => (
                     <StaggerItem key={g.path}>
-                      <Spot className="tile">
+                      <Spot className={`tile${g.specialist ? " tile--hot" : ""}`}>
                         <Link href={g.path} className="tile__link">
                           <h3>{g.label}</h3>
                           <p>{g.hindi}</p>
+{g.specialist && <span className="tile__tag">Specialist</span>}
                           <span className="tile__go"><ArrowRight size={18} aria-hidden="true" /></span>
                         </Link>
                       </Spot>
@@ -240,10 +248,11 @@ export default function ServicePage({ page }) {
             <Stagger className="tiles tiles--tight">
               {[overview, ...related].filter((p) => p.path !== page.path).map((g) => (
                 <StaggerItem key={g.path}>
-                  <Spot className="tile">
+                  <Spot className={`tile${g.specialist ? " tile--hot" : ""}`}>
                     <Link href={g.path} className="tile__link">
                       <h3>{g.label}</h3>
                       <p>{g.hindi}</p>
+{g.specialist && <span className="tile__tag">Specialist</span>}
                       <span className="tile__go"><ArrowRight size={18} aria-hidden="true" /></span>
                     </Link>
                   </Spot>

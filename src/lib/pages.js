@@ -57,7 +57,156 @@ export const PAGES = [
       { q: "Kya Passport Seva Kendra jaana padta hai?", a: "Haan. Online application ke baad document verification, photo aur biometrics ke liye appointment par jaana padta hai. Hum taiyari karwa dete hain taaki visit aasaan rahe." },
       { q: "Kya aap mera appointment book kar dete hain?", a: "Haan, official portal par slot chunne aur book karne mein hum madad karte hain. Slot milna authority par depend karta hai, ye hamare control mein nahi hai." },
     ],
-    related: ["/passport-services-dewas/fresh-passport/", "/passport-services-dewas/renewal-reissue/", "/passport-services-dewas/tatkal/", "/passport-services-dewas/minor-passport/"],
+    related: ["/passport-services-dewas/court-case-passport/", "/passport-services-dewas/lost-passport/", "/passport-services-dewas/fresh-passport/", "/passport-services-dewas/renewal-reissue/", "/passport-services-dewas/tatkal/", "/passport-services-dewas/minor-passport/"],
+  },
+  {
+    path: "/passport-services-dewas/court-case-passport/",
+    service: "passport",
+    kind: "service",
+    specialist: true,
+    timeline: { normal: "Case ke hisaab se", fast: "fixed time ka vaada nahi" },
+    label: "Court case passport",
+    title: "Court Case Passport Specialist in Dewas | Iqbal Khan",
+    description:
+      "Pending court case ke saath passport? Dewas mein court order, documents aur application ki specialist guidance. Faisla authority aur court ka hota hai.",
+    h1: "Court case passport specialist in Dewas",
+    hindi: "कोर्ट केस के साथ पासपोर्ट: कोर्ट आदेश, दस्तावेज़ और आवेदन में विशेषज्ञ मार्गदर्शन",
+    intro: [
+      "Agar aapke khilaf koi criminal case court mein pending hai, to passport office aam taur par bina court ki permission ke passport nahi deta. Yahin par log sabse zyada atak jaate hain: kaunsa court order chahiye, usme kya likha ho, aur passport application mein case ki details kaise bharein.",
+      "Court case wale passport hamari specialty hai. Hum aapke vakeel ke saath milkar passport ki side sambhalte hain: sahi documents, court order ka sahi use, application aur appointment ki taiyari. Court mein aapki taraf se hum vakalat nahi karte, wo aapka vakeel karega, aur final faisla court aur passport authority ka hota hai.",
+    ],
+    canDo: [
+      "Aapke case ke hisaab se batana ki passport ke liye kya chahiye",
+      "Court order ya permission mein kya zaroori hai, ye vakeel ke saath samjhana",
+      "Passport application mein pending case ki details sahi tarah bharne mein madad",
+      "Court order aur passport documents ki poori checklist taiyar karna",
+      "Appointment aur verification ki taiyari karwana",
+      "Application ke baad status par guide karna",
+    ],
+    cannotDo: [
+      "Court mein vakalat karna ya legal salah dena, iske liye vakeel chahiye",
+      "Court order ya passport approval dilane ki guarantee dena",
+      "Case ya police record ko badalna ya chhupana",
+      "Processing time ka vaada karna",
+    ],
+    eligibility: [
+      "Criminal case pending ho to aam taur par court ki permission zaroori hoti hai. Kai cases mein permission mein diya gaya samay passport ki validity tay karta hai.",
+      "Case kis stage mein hai (FIR, chargesheet ya trial), usse process alag ho sakta hai. Isliye pehle apni situation batayein.",
+      "Jin cases mein sazaa ho chuki hai ya passport impound hua hai, unke liye alag niyam lagte hain. Hum aapko sahi route batate hain.",
+    ],
+    docs: [
+      {
+        group: "Court ki side",
+        items: [
+          "Court order ya permission jo passport ke liye di gayi ho",
+          "Case number aur court ka naam",
+          "FIR ya chargesheet ki copy, jahan lagu ho",
+          "Bail order, agar mila ho",
+        ],
+      },
+      {
+        group: "Passport ki side",
+        items: [
+          "Proof of address",
+          "Proof of date of birth",
+          "Photo ID such as Aadhaar",
+          "Purana passport, agar hai",
+        ],
+      },
+    ],
+    steps: [
+      { t: "Apni situation batayein", d: "Case ka type aur stage batayein, aur ye bhi ki aapka vakeel hai ya nahi." },
+      { t: "Court order ki taiyari", d: "Court se passport ki permission aapka vakeel leta hai. Hum batate hain ki passport ki side se order mein kya hona chahiye." },
+      { t: "Documents ki checklist", d: "Court order ke saath passport ke saare documents taiyar karte hain." },
+      { t: "Online application", d: "Passport Seva portal par application, pending case ki details sahi tarah ke saath. Official fee aap wahin bharte hain." },
+      { t: "Appointment par jaana", d: "Passport Seva Kendra mein documents aur court order ke saath verification, photo aur biometrics.", inPerson: true },
+      { t: "Verification aur status", d: "Police verification aur authority ka faisla. Hum status par aapko guide karte hain." },
+    ],
+    mistakes: [
+      "Bina court order ke application bhej dena",
+      "Court order mein passport ki permission ya samay ka zikr na hona",
+      "Application mein pending case ki baat chhupana ya galat likhna",
+      "Safar ki date nazdeek aane par aakhri waqt par apply karna",
+      "Court order aur purane passport ki copies saath na rakhna",
+    ],
+    faqs: [
+      { q: "Court case chal raha hai to kya passport ban sakta hai?", a: "Aam taur par haan, lekin court ki permission ke saath. Aapko us court se order lena hota hai jahan case pending hai. Order milne ke baad passport application aur appointment ka process hota hai. Final faisla passport authority karti hai, hum guarantee nahi dete." },
+      { q: "Court order mein kya likha hona chahiye?", a: "Aam taur par order mein passport banwane ya renew karne ki permission aur ek tay samay likha hota hai. Exact language aapka vakeel tay karta hai. Hum batate hain ki passport ki side se kya chahiye." },
+      { q: "Kya aap vakeel ka kaam karte hain?", a: "Nahi. Hum passport consultant hain. Court mein arji aur legal salah vakeel deta hai. Hum passport ki application aur documents sambhalte hain." },
+      { q: "Court case wale passport mein kitna time lagta hai?", a: "Ye case, court order aur police verification par depend karta hai, isliye hum koi fixed time ka vaada nahi karte. Pehle se sahi taiyari karne se der kam ho sakti hai." },
+    ],
+    related: ["/passport-services-dewas/lost-passport/", "/passport-services-dewas/renewal-reissue/", "/passport-services-dewas/fresh-passport/"],
+  },
+  {
+    path: "/passport-services-dewas/lost-passport/",
+    service: "passport",
+    kind: "service",
+    label: "Lost or damaged passport",
+    title: "Lost Passport Help in Dewas | Iqbal Khan",
+    description:
+      "Passport kho gaya ya kharab ho gaya? Dewas mein police report, documents aur re-issue application mein madad lein. Guarantee nahi, sahi process.",
+    h1: "Lost or damaged passport help in Dewas",
+    hindi: "पासपोर्ट खो गया या खराब हो गया? रिपोर्ट, दस्तावेज़ और री-इश्यू में सहायता",
+    intro: [
+      "Passport kho jaye ya kharab ho jaye to ghabrane ki zaroorat nahi, par kaam sahi order mein karna zaroori hai: pehle report, phir documents, phir naye passport ki application. Galat order se der hoti hai.",
+      "Hum aapko batate hain ki aapka case kaunsa hai (kho gaya, chori hua ya kharab hua), kaunsi report ya affidavit chahiye, aur Passport Seva portal par re-issue application kaise karni hai.",
+    ],
+    canDo: [
+      "Aapke case ke hisaab se sahi route batana",
+      "Police report ya affidavit ke baare mein batana ki kya chahiye",
+      "Documents ki checklist taiyar karna",
+      "Online re-issue application bharne mein madad",
+      "Appointment ki taiyari karwana",
+      "Application ke baad status par guide karna",
+    ],
+    cannotDo: [
+      "Police report ya passport authority ka faisla badalna",
+      "Delivery date ki guarantee dena",
+      "Aapki jagah appointment par jaana",
+    ],
+    eligibility: [
+      "Passport India ka hona chahiye jo kho gaya ya kharab hua ho.",
+      "Lost ya damaged passport ke liye alag official process aur zyada fee lagti hai, jo authority tay karti hai.",
+      "Agar passport par koi case ya impound ka mamla hai to alag niyam lagte hain. Hum pehle aapse puchh lete hain.",
+    ],
+    docs: [
+      {
+        group: "Passport ki details",
+        items: [
+          "Purane passport ka number aur issue date, agar yaad ho",
+          "Purane passport ki copy, agar kisi ke paas ho",
+          "Proof of address",
+          "Proof of date of birth",
+        ],
+      },
+      {
+        group: "Kho jaane ki report",
+        items: [
+          "Police report ya complaint ki copy, jahan lagu ho",
+          "Affidavit, jahan portal maange",
+          "Koi aur form jo official portal maange",
+        ],
+      },
+    ],
+    steps: [
+      { t: "Apna case batayein", d: "Passport kho gaya, chori hua ya kharab hua, aur kab aur kahan." },
+      { t: "Report ki taiyari", d: "Police report ya affidavit jahan lagu ho. Hum batate hain kya chahiye." },
+      { t: "Online re-issue application", d: "Passport Seva portal par application. Official fee aap wahin bharte hain." },
+      { t: "Appointment par jaana", d: "Passport Seva Kendra mein verification, photo aur biometrics.", inPerson: true },
+      { t: "Verification aur naya passport", d: "Verification ke baad naya passport post se bheja jata hai. Hum tracking par guide karte hain." },
+    ],
+    mistakes: [
+      "Report ke bina application bhej dena",
+      "Purane passport ki details galat likhna",
+      "Safar ki date nazdeek aane par aakhri waqt par apply karna",
+      "Report karne ke baad purana passport mil jaye to authority se puchhe bina use karna",
+    ],
+    faqs: [
+      { q: "Passport kho gaya to sabse pehle kya karein?", a: "Sabse pehle police ko report karein aur report ki copy rakhein. Phir hum aapko batate hain ki re-issue application aur documents kaise taiyar karne hain." },
+      { q: "Lost passport ki fee zyada lagti hai kya?", a: "Haan, lost ya damaged passport ke liye official fee aam renewal se alag aur zyada ho sakti hai. Ye authority tay karti hai aur portal par dikhti hai. Hamari service charge alag se, kaam shuru karne se pehle confirm hoti hai." },
+      { q: "Naya passport kitne din mein milega?", a: "Ye verification aur authority par depend karta hai, isliye fixed date ka vaada nahi karte. Sahi documents se der kam hoti hai." },
+    ],
+    related: ["/passport-services-dewas/renewal-reissue/", "/passport-services-dewas/court-case-passport/", "/passport-services-dewas/tatkal/"],
   },
   {
     path: "/passport-services-dewas/fresh-passport/",
@@ -113,7 +262,7 @@ export const PAGES = [
       { q: "Kya police verification zaroori hoti hai?", a: "Ye case par depend karta hai. Kuch applications mein passport issue hone se pehle verification hoti hai aur kuch mein baad mein. Ye authority decide karti hai, aur aapko kya expect karna hai wo hum bata dete hain." },
       { q: "Fresh passport banne mein kitna time lagta hai?", a: "Sab kuch sahi ho to aam taur par 15 to 21 days lagte hain, lekin iski guarantee nahi hai. Timeline passport authorities tay karti hain." },
     ],
-    related: ["/passport-services-dewas/minor-passport/", "/passport-services-dewas/tatkal/", "/passport-services-dewas/renewal-reissue/"],
+    related: ["/passport-services-dewas/court-case-passport/", "/passport-services-dewas/minor-passport/", "/passport-services-dewas/tatkal/", "/passport-services-dewas/renewal-reissue/"],
   },
   {
     path: "/passport-services-dewas/renewal-reissue/",
@@ -168,7 +317,7 @@ export const PAGES = [
       { q: "Passport kho gaya hai to kya karein?", a: "Lost passport ke liye ek additional official process hota hai, jisme police report ya affidavit lag sakta hai. Aap hume contact kijiye, hum paperwork aur re-issue application mein guide karenge." },
       { q: "Renewal ke saath naam ya address badal sakte hain kya?", a: "Haan, lekin change ko support karne wale documents chahiye. Aapke case mein authority kaunse proofs accept karti hai, ye hum bata dete hain." },
     ],
-    related: ["/passport-services-dewas/tatkal/", "/passport-services-dewas/fresh-passport/", "/passport-services-dewas/minor-passport/"],
+    related: ["/passport-services-dewas/lost-passport/", "/passport-services-dewas/court-case-passport/", "/passport-services-dewas/tatkal/", "/passport-services-dewas/fresh-passport/"],
   },
   {
     path: "/passport-services-dewas/tatkal/",
@@ -555,10 +704,12 @@ export const subpages = (service) =>
   PAGES.filter((p) => p.service === service && p.kind === "service");
 
 export const POPULAR = [
+  { title: "Court case passport", text: "Pending court case ke saath passport: hamari specialty", path: "/passport-services-dewas/court-case-passport/", icon: "Gavel", badge: "Specialist" },
   { title: "Fresh passport", text: "Pehli baar passport, documents aur form filling mein madad", path: "/passport-services-dewas/fresh-passport/", icon: "FileText" },
   { title: "Renewal and re-issue", text: "Expiring, expired, lost ya damaged passport ke liye", path: "/passport-services-dewas/renewal-reissue/", icon: "RefreshCcw" },
   { title: "Tatkal guidance", text: "Tez official route: eligibility aur documents ki jaankari", path: "/passport-services-dewas/tatkal/", icon: "Zap" },
   { title: "Minor passport", text: "18 saal se kam ke liye, parents ki consent ke saath", path: "/passport-services-dewas/minor-passport/", icon: "Baby" },
+  { title: "Lost passport", text: "Passport kho gaya ya kharab hua? Sahi order mein kaam", path: "/passport-services-dewas/lost-passport/", icon: "TriangleAlert" },
   { title: "New PAN and e-PAN", text: "Pehli baar mein sahi apply karein, ya instant e-PAN check karein", path: "/pan-card-services-dewas/", icon: "IdCard" },
   { title: "PAN correction", text: "Naam, date of birth, address ya photo ki correction", path: "/pan-card-services-dewas/correction/", icon: "PenLine" },
   { title: "Learner's licence", text: "Eligibility, documents aur test ki taiyari", path: "/driving-licence-services-dewas/learners-licence/", icon: "CalendarCheck" },
