@@ -80,13 +80,6 @@ export function businessGraph() {
         closes: h.closes,
       })),
     }),
-    ...(SITE.googleRating && {
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: SITE.googleRating.value,
-        reviewCount: SITE.googleRating.count,
-      },
-    }),
   };
 
   return {

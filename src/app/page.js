@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import JsonLd from "@/components/JsonLd";
+import ReviewCta from "@/components/ReviewCta";
 import {
   About,
   FaqSection,
@@ -30,6 +31,7 @@ export default function Home() {
       <HowItWorks />
       <Reviews />
       <Visit />
+      <ReviewCta />
       <FaqSection />
       <FinalCta />
       <JsonLd data={faqSchema(FAQS)} />

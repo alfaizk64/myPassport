@@ -220,40 +220,84 @@ export function HowItWorks() {
   );
 }
 
-/* ───────── Reviews: only genuine, supplied reviews are shown ───────── */
+/* ───────── Reviews: real Google reviews, word for word ───────── */
+const initials = (name) =>
+  name
+    .split(" ")
+    .map((w) => w[0])
+    .slice(0, 2)
+    .join("")
+    .toUpperCase();
+
+function GoldStars({ count, size = 18 }) {
+  return Array.from({ length: count }).map((_, k) => (
+    <Star key={k} size={size} fill="currentColor" aria-hidden="true" />
+  ));
+}
+
 export function Reviews() {
   if (!SITE.reviews.length) return null;
   return (
-    <section id="reviews" className="section" aria-labelledby="reviews-h">
+    <section id="reviews" className="section has-bg" data-bg="भरोसा" aria-labelledby="reviews-h">
       <div className="container">
         <Reveal className="section-head">
-          <p className="eyebrow">Reviews</p>
+          <p className="eyebrow">Google reviews</p>
           <SectionTitle id="reviews-h" text="Customers kya kehte hain" />
-          {SITE.googleProfileUrl && (
-            <TrackedLink href={SITE.googleProfileUrl} external className="official">
-              Google par saare reviews padhein
-              <ExternalLink size={16} aria-hidden="true" />
-            </TrackedLink>
-          )}
+          <p>
+            Ye hamari Google listing ke asli reviews hain, jaise likhe gaye waise hi.
+            {SITE.googleProfileUrl && (
+              <>
+                {" "}
+                <TrackedLink
+                  href={SITE.googleProfileUrl}
+                  external
+                  event="directions_click"
+                  params={{ cta_location: "reviews-head" }}
+                  className="official"
+                >
+                  Google par saare reviews dekhein
+                  <ExternalLink size={16} aria-hidden="true" />
+                </TrackedLink>
+              </>
+            )}
+          </p>
         </Reveal>
-        <Stagger className="reviews">
-          {SITE.reviews.map((r) => (
-            <StaggerItem key={`${r.name}-${r.date}`}>
-              <figure className="review">
-                <div className="review__stars" role="img" aria-label={`${r.rating} out of 5 stars`}>
-                  {Array.from({ length: r.rating }).map((_, i) => (
-                    <Star key={i} size={18} fill="currentColor" aria-hidden="true" />
-                  ))}
-                </div>
-                <blockquote>{r.text}</blockquote>
-                <footer>
-                  {r.name}
-                  {r.date ? `, ${r.date}` : ""}
-                </footer>
-              </figure>
-            </StaggerItem>
-          ))}
-        </Stagger>
+
+        <Reveal className="rsum">
+          <span className="rsum__stars" role="img" aria-label="5 out of 5 stars">
+            <GoldStars count={5} size={26} />
+          </span>
+          <span>
+            <strong>{SITE.reviews.length} Google reviews</strong> yahan dikhaye gaye hain, sabhi 5 star
+          </span>
+        </Reveal>
+
+        <div
+          className="reviews-scroll"
+          role="region"
+          aria-label="Google reviews, side mein scroll karein"
+          tabIndex={0}
+        >
+          <Stagger className="reviews">
+            {SITE.reviews.map((r, i) => (
+              <StaggerItem key={r.name} className={`si${r.featured ? " si--feature" : ""}`}>
+                <figure className={`review${r.featured ? " review--feature" : ""}`}>
+                  <div className="review__head">
+                    <span className={`av av--${i % 4}`} aria-hidden="true">{initials(r.name)}</span>
+                    <div>
+                      <strong>{r.name}</strong>
+                      <span>{r.badge ? `${r.badge} · Google review` : "Google review"}</span>
+                    </div>
+                  </div>
+                  <div className="review__stars" role="img" aria-label={`${r.rating} out of 5 stars`}>
+                    <GoldStars count={r.rating} size={r.featured ? 22 : 18} />
+                  </div>
+                  <blockquote>{r.text}</blockquote>
+                </figure>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
       </div>
     </section>
   );

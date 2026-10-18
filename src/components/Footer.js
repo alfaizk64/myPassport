@@ -70,6 +70,19 @@ export default function Footer() {
               >
                 Message on WhatsApp
               </TrackedLink>
+              {SITE.googleReviewUrl && (
+                <>
+                  <br />
+                  <TrackedLink
+                    href={SITE.googleReviewUrl}
+                    external
+                    event="review_click"
+                    params={{ cta_location: "footer" }}
+                  >
+                    Google par review dein
+                  </TrackedLink>
+                </>
+              )}
               {SITE.hours && (
                 <>
                   <br />

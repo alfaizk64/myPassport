@@ -30,7 +30,7 @@ export const SITE = {
   // Exact pin from the business listing shared by the owner.
   geo: { lat: "22.9641865", lng: "76.0579748" },
 
-  // Carried over from the previous site. Please re-confirm before launch.
+  // Confirmed correct by the owner on 2026-10-18 (hours and starting prices).
   hours: "Monday to Saturday, 9:00 AM to 8:00 PM",
   hoursSchema: [
     {
@@ -42,15 +42,45 @@ export const SITE = {
 
   // Hidden until the owner can back them with records or the live profile.
   // Previous site claimed: 8+ years, 12K+ clients, 98% success, 4.9 stars.
-  // Set any of these to show it in the trust strip (and rating in schema).
+  // Set any of these to show it in the trust strip. Ratings are not put in schema: Google ignores a business rating about itself.
   experienceSince: null, // e.g. 2018 -> "8+ years of experience"
   clientsServed: null, // e.g. "12,000+"
+  googleReviewUrl: "https://g.page/r/CVx-uy-uA4giEAI/review", // opens the Google review form
   googleProfileUrl: "https://maps.app.goo.gl/AXPC2pmdq7R2MDmX7", // Google Maps listing shared by the owner
   googleRating: null, // e.g. { value: 4.9, count: 120 } from the real profile
   // Exact pin: in Google Maps open the business > Share > Embed a map > copy the src="..." URL here.
   mapEmbedUrl: null,
   photos: { consultant: null, office: null }, // e.g. "/images/iqbal-khan.jpg"
-  reviews: [], // [{ name, rating, date, text }] genuine, permitted reviews only
+  // Real public Google reviews, copied word for word from the owner's listing (2026-10-18).
+  reviews: [
+    {
+      name: "Mustakim Shaikh",
+      badge: "Local Guide",
+      rating: 5,
+      featured: true,
+      text: "Very good services, he helped me with end to end process from document collecting to passport office verifications for my entire family. Even his knowledge and expertise helped me get passport of my 4 years son in single attempt within a week.\nHighly Recommended 👍👍",
+    },
+    {
+      name: "Yash Dubey",
+      rating: 5,
+      text: "I had a great experience with Iqbal Khan Passport Consultant. The entire passport process was handled smoothly and professionally. They guided me at every step, from documentation to final submission, making everything stress-free.\n\nTheir communication was clear, and they were always available to answer my questions. The work was completed within the promised time without any hassle.\n\nHighly recommended for anyone looking for reliable and efficient passport consultancy services.",
+    },
+    {
+      name: "Mohammed Anas Khan",
+      rating: 5,
+      text: "Excellent service and a great experience! Iqbal Khan Passport Consultant provides fast, reliable, and professional service. They guide you through the entire passport process, from document preparation to submission, and explain everything clearly. The staff is helpful, supportive, and responsive to all queries. The process was smooth and hassle-free.\n\nHighly recommended for anyone looking for trustworthy passport consultancy services in Dewas. Thank you for the excellent service!",
+    },
+    {
+      name: "Arpit Sharma",
+      rating: 5,
+      text: "Great consulting service 👍\nProfessional and reliable\nHelpful and knowledgeable\nExcellent guidance provided\nQuick and efficient support",
+    },
+    { name: "Hasim Shaikh", rating: 5, text: "Kaam kafi acha hai kafi fast hai" },
+    { name: "Sameer Shaikh", rating: 5, text: "Good service, cant complain." },
+    { name: "Irshad Shaikh", rating: 5, text: "Excellent work" },
+    { name: "Rajveer Singh", rating: 5, text: "provide proper guidance and have a experties" },
+    { name: "Kunal Choudhary", rating: 5, text: "good experience nice work.👍👍" },
+  ],
 
   contentReviewed: "17 October 2026",
   contentReviewedISO: "2026-10-17",
