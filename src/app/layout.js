@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import JsonLd from "@/components/JsonLd";
 import MobileContactBar from "@/components/MobileContactBar";
 import { MotionProvider, ScrollProgress } from "@/components/Motion";
+import { BODY_SCRIPT } from "@/components/SiteScripts";
 import { businessGraph } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
@@ -18,6 +19,7 @@ const sans = Plus_Jakarta_Sans({
 const hindi = Noto_Sans_Devanagari({
   subsets: ["devanagari"],
   display: "swap",
+  preload: false,
   variable: "--font-hi",
 });
 
@@ -113,7 +115,7 @@ const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en-IN" className={`${sans.variable} ${hindi.variable}`}>
+    <html lang="en-IN" className={`${sans.variable} ${hindi.variable}`} suppressHydrationWarning>
       <head>
         <noscript>
           <style>{"[data-reveal]{opacity:1!important;transform:none!important}"}</style>
@@ -132,6 +134,7 @@ export default function RootLayout({ children }) {
           <FloatingWhatsApp />
         </MotionProvider>
         <JsonLd data={businessGraph()} />
+        <script dangerouslySetInnerHTML={{ __html: BODY_SCRIPT }} />
         {GA_ID && (
           <>
             <Script

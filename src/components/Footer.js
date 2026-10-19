@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import TrackedLink from "@/components/TrackedLink";
 import { FOOTER_SERVICE_LINKS, NAV } from "@/lib/content";
@@ -10,12 +11,15 @@ export default function Footer() {
       <div className="container">
         <div className="ftr__grid">
           <div>
-            <Link href="/" className="brand" aria-label="Iqbal Khan Passport Consultant, home">
-              <span className="brand__mark" aria-hidden="true">IK</span>
-              <span className="brand__text">
-                <strong>Iqbal Khan</strong>
-                <small>Passport Consultant · Dewas</small>
-              </span>
+            <Link href="/" className="brand brand--chip" aria-label="Iqbal Khan Passport Consultant, home">
+              <Image
+                src={SITE.logo}
+                alt="Iqbal Khan Passport Consultant, Dewas"
+                width={1978}
+                height={638}
+                sizes="230px"
+                className="brand__logo"
+              />
             </Link>
             <p>
               Independent passport, PAN card and driving licence assistance in Dewas,
@@ -42,6 +46,15 @@ export default function Footer() {
                   <Link href={`/${n.href}`}>{n.label}</Link>
                 </li>
               ))}
+              <li>
+                <Link href="/guides/">Guides</Link>
+              </li>
+              <li>
+                <Link href="/about/">About Iqbal Khan</Link>
+              </li>
+              <li>
+                <Link href="/hi/" lang="hi">हिन्दी में पढ़ें</Link>
+              </li>
             </ul>
           </div>
 

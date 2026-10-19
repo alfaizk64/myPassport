@@ -5,6 +5,7 @@ import {
   About,
   FaqSection,
   FinalCta,
+  GuidesTeaser,
   HowItWorks,
   Reviews,
   ServiceCards,
@@ -34,6 +35,7 @@ export default function Home() {
       <Reviews />
       <Visit />
       <ReviewCta />
+      <GuidesTeaser />
       <FaqSection />
       <FinalCta />
       <JsonLd data={faqSchema(FAQS)} />

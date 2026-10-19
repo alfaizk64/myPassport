@@ -6,13 +6,14 @@ import Faq from "@/components/Faq";
 import Icon from "@/components/Icon";
 import IdCardFlip from "@/components/IdCardFlip";
 import MapEmbed from "@/components/MapEmbed";
-import { Reveal, ScrollSteps, SectionTitle, Stagger, StaggerItem } from "@/components/Motion";
+import { Reveal, ScrollSteps, SectionTitle, Spot, Stagger, StaggerItem } from "@/components/Motion";
 import OpenNow from "@/components/OpenNow";
 import RoleSwitcher from "@/components/RoleSwitcher";
 import ServiceExplorer from "@/components/ServiceExplorer";
 import TrackedLink from "@/components/TrackedLink";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { FAQS, RESPONSIBILITIES, SERVICES, STEPS } from "@/lib/content";
+import { GUIDES } from "@/lib/guides";
 import { POPULAR } from "@/lib/pages";
 import { ADDRESS_ONE_LINE, DEFAULT_WA_MESSAGE, SITE, telLink } from "@/lib/site";
 
@@ -168,9 +169,19 @@ export function About() {
       <div className="container about">
         <Reveal>
           {photo ? (
-            <div className="about__photo">
-              <Image src={photo} alt="Iqbal Khan, passport consultant in Dewas" width={640} height={720} />
-            </div>
+            <figure className="about__photo">
+              <Image
+                src={photo}
+                alt="Iqbal Khan, passport consultant in Dewas"
+                width={1086}
+                height={1448}
+                sizes="(max-width: 900px) 90vw, 440px"
+              />
+              <figcaption>
+                <strong>Iqbal Khan</strong>
+                <span>Passport · PAN Card · Driving Licence · Dewas</span>
+              </figcaption>
+            </figure>
           ) : (
             <IdCardFlip />
           )}
@@ -467,6 +478,41 @@ export function Visit() {
             ))}
           </ul>
         </Reveal>
+      </div>
+    </section>
+  );
+}
+
+/* ───────── Guides teaser: internal links to the article pages ───────── */
+export function GuidesTeaser() {
+  return (
+    <section className="section section--white" aria-labelledby="guides-h">
+      <div className="container">
+        <Reveal className="section-head">
+          <p className="eyebrow">Useful guides</p>
+          <SectionTitle id="guides-h" text="Passport ke sawalon ke seedhe jawab" />
+          <p>
+            Documents, appointment, police verification aur fake agents se bachav, simple
+            Hinglish mein.{" "}
+            <Link href="/guides/" className="official">
+              Saari guides dekhein
+              <ArrowRight size={16} aria-hidden="true" />
+            </Link>
+          </p>
+        </Reveal>
+        <Stagger className="tiles tiles--tight">
+          {GUIDES.slice(0, 3).map((g) => (
+            <StaggerItem key={g.slug}>
+              <Spot className="tile">
+                <Link href={g.path} className="tile__link">
+                  <h3>{g.h1}</h3>
+                  <p>{g.description}</p>
+                  <span className="tile__go"><ArrowRight size={18} aria-hidden="true" /></span>
+                </Link>
+              </Spot>
+            </StaggerItem>
+          ))}
+        </Stagger>
       </div>
     </section>
   );

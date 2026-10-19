@@ -4,7 +4,6 @@ import { useRef } from "react";
 import {
   LazyMotion,
   MotionConfig,
-  domAnimation,
   useScroll,
   useSpring,
 } from "motion/react";
@@ -13,9 +12,11 @@ import * as m from "motion/react-m";
 export const EASE = [0.22, 1, 0.36, 1];
 const VIEWPORT = { once: true, margin: "0px 0px -10% 0px" };
 
+const loadFeatures = () => import("@/components/motionFeatures").then((mod) => mod.default);
+
 export function MotionProvider({ children }) {
   return (
-    <LazyMotion features={domAnimation} strict>
+    <LazyMotion features={loadFeatures} strict>
       <MotionConfig reducedMotion="user">{children}</MotionConfig>
     </LazyMotion>
   );
@@ -174,4 +175,39 @@ export function SectionTitle({ id, text }) {
       ))}
     </m.h2>
   );
+}
+
+/** Hero copy entrance: fade and rise. `as` picks the tag (p, div, ul). */
+export function Up({ as = "div", delay = 0, children, ...rest }) {
+  const Tag = m[as];
+  return (
+    <Tag
+      data-reveal
+      initial={{ opacity: 0, y: 18 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, delay, ease: EASE }}
+      {...rest}
+    >
+      {children}
+    </Tag>
+  );
+}
+
+/** Headline words rising out of a mask on load. */
+export function Words({ text, start = 0 }) {
+  return text.split(" ").map((w, i) => (
+    <span key={`${w}-${i}`}>
+      <span className="w">
+        <m.span
+          data-reveal
+          className="w__in"
+          initial={{ y: "115%" }}
+          animate={{ y: 0 }}
+          transition={{ duration: 0.75, delay: start + i * 0.07, ease: EASE }}
+        >
+          {w}
+        </m.span>
+      </span>{" "}
+    </span>
+  ));
 }

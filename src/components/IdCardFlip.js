@@ -1,33 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import * as m from "motion/react-m";
-import { useMotionValue, useSpring, useTransform } from "motion/react";
 import { RotateCw } from "lucide-react";
 import OpenNow from "@/components/OpenNow";
 import { ADDRESS_ONE_LINE, SITE } from "@/lib/site";
 
+// The pointer tilt is done with CSS variables set by the shared script (data-tilt).
 export default function IdCardFlip() {
   const [flipped, setFlipped] = useState(false);
-  const mx = useMotionValue(0);
-  const my = useMotionValue(0);
-  const rotateY = useSpring(useTransform(mx, [-0.5, 0.5], [-9, 9]), { stiffness: 120, damping: 18 });
-  const rotateX = useSpring(useTransform(my, [-0.5, 0.5], [7, -7]), { stiffness: 120, damping: 18 });
 
   return (
-    <div
-      className="idflip"
-      onPointerMove={(e) => {
-        const r = e.currentTarget.getBoundingClientRect();
-        mx.set((e.clientX - r.left) / r.width - 0.5);
-        my.set((e.clientY - r.top) / r.height - 0.5);
-      }}
-      onPointerLeave={() => {
-        mx.set(0);
-        my.set(0);
-      }}
-    >
-      <m.div className="idflip__tilt" style={{ rotateX, rotateY }}>
+    <div className="idflip" data-tilt="9 7">
+      <div className="idflip__tilt">
         <div className="idflip__card" data-flipped={flipped}>
           <div className="idflip__face idflip__front" aria-hidden={flipped}>
             <div className="idflip__top">
@@ -57,7 +41,7 @@ export default function IdCardFlip() {
             </ul>
           </div>
         </div>
-      </m.div>
+      </div>
 
       <button
         type="button"

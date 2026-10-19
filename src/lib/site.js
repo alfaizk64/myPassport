@@ -45,12 +45,13 @@ export const SITE = {
   // Set any of these to show it in the trust strip. Ratings are not put in schema: Google ignores a business rating about itself.
   experienceSince: null, // e.g. 2018 -> "8+ years of experience"
   clientsServed: null, // e.g. "12,000+"
+  logo: "/PassportLogo.webp",
   googleReviewUrl: "https://g.page/r/CVx-uy-uA4giEAI/review", // opens the Google review form
   googleProfileUrl: "https://maps.app.goo.gl/AXPC2pmdq7R2MDmX7", // Google Maps listing shared by the owner
   googleRating: null, // e.g. { value: 4.9, count: 120 } from the real profile
   // Exact pin: in Google Maps open the business > Share > Embed a map > copy the src="..." URL here.
   mapEmbedUrl: null,
-  photos: { consultant: null, office: null }, // e.g. "/images/iqbal-khan.jpg"
+  photos: { consultant: "/iqbalKhanAboutSection.webp", office: null }, // e.g. "/images/iqbal-khan.jpg"
   // Real public Google reviews, copied word for word from the owner's listing (2026-10-18).
   reviews: [
     {

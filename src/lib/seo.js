@@ -1,13 +1,30 @@
 import { SITE } from "@/lib/site";
 
-export function buildMetadata({ title, description, path }) {
+// English/Hinglish page -> its Hindi (Devanagari) twin, used for hreflang.
+export const HI_TWINS = {
+  "/": "/hi/",
+  "/passport-services-dewas/": "/hi/passport-services-dewas/",
+  "/passport-services-dewas/court-case-passport/": "/hi/court-case-passport/",
+  "/passport-services-dewas/lost-passport/": "/hi/lost-passport/",
+};
+
+export function languageAlternates(path) {
+  const hiPath = HI_TWINS[path];
+  if (hiPath) return { "en-IN": path, "hi-IN": hiPath, "x-default": path };
+  const enPath = Object.keys(HI_TWINS).find((k) => HI_TWINS[k] === path);
+  if (enPath) return { "en-IN": enPath, "hi-IN": path, "x-default": enPath };
+  return undefined;
+}
+
+export function buildMetadata({ title, description, path, locale = "en_IN" }) {
+  const languages = languageAlternates(path);
   return {
     title: { absolute: title },
     description,
-    alternates: { canonical: path },
+    alternates: { canonical: path, ...(languages && { languages }) },
     openGraph: {
       type: "website",
-      locale: "en_IN",
+      locale,
       siteName: SITE.name,
       title,
       description,
@@ -138,5 +155,47 @@ export function faqSchema(items) {
       name: f.q,
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
+  };
+}
+
+export function personSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": `${SITE.url}/#iqbal-khan`,
+    name: SITE.owner,
+    alternateName: "इक़बाल खान",
+    jobTitle: "Passport and document consultant",
+    worksFor: { "@id": `${SITE.url}/#business` },
+    url: `${SITE.url}/about/`,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: SITE.address.city,
+      addressRegion: SITE.address.region,
+      addressCountry: SITE.address.country,
+    },
+    knowsAbout: [
+      "Passport application assistance",
+      "Court case passport guidance",
+      "Lost passport re-issue",
+      "PAN card assistance",
+      "Driving licence assistance",
+    ],
+    ...(SITE.googleProfileUrl && { sameAs: [SITE.googleProfileUrl] }),
+  };
+}
+
+export function articleSchema(guide) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: guide.h1,
+    description: guide.description,
+    inLanguage: "en-IN",
+    datePublished: SITE.contentReviewedISO,
+    dateModified: SITE.contentReviewedISO,
+    mainEntityOfPage: `${SITE.url}${guide.path}`,
+    author: { "@id": `${SITE.url}/#iqbal-khan` },
+    publisher: { "@id": `${SITE.url}/#business` },
   };
 }

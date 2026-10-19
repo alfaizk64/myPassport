@@ -1,11 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { ChevronDown, ChevronRight, Menu, X } from "lucide-react";
 import { CallButton, WhatsAppButton } from "@/components/Cta";
 import Icon from "@/components/Icon";
 import { NAV, SERVICES } from "@/lib/content";
+import { SITE } from "@/lib/site";
 
 const SECTION_IDS = ["home", "services", "how-it-works", "about", "faq", "contact"];
 
@@ -52,11 +54,15 @@ export default function Header() {
     <header className={`hdr${scrolled ? " is-scrolled" : ""}`}>
       <div className="container hdr__row">
         <Link href="/" className="brand" aria-label="Iqbal Khan Passport Consultant, home">
-          <span className="brand__mark" aria-hidden="true">IK</span>
-          <span className="brand__text">
-            <strong>Iqbal Khan</strong>
-            <small>Passport Consultant · Dewas</small>
-          </span>
+          <Image
+            src={SITE.logo}
+            alt="Iqbal Khan Passport Consultant, Dewas"
+            width={1978}
+            height={638}
+            priority
+            sizes="(max-width: 980px) 190px, 230px"
+            className="brand__logo"
+          />
         </Link>
 
         <nav className="nav" aria-label="Main">
