@@ -1545,11 +1545,11 @@ body { padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px)); }
 
 
 /* ───────── brand logo (header + footer) ───────── */
-.brand__logo { display: block; width: auto; height: 46px; }
-.brand--chip { padding: 0.55rem 0.8rem; border-radius: 16px; background: var(--white); box-shadow: var(--shadow-sm); }
-.brand--chip .brand__logo { height: 42px; }
+.brand__logo { display: block; width: auto; height: 54px; }
+.brand--chip { padding: 0.65rem 1.1rem; border-radius: 16px; background: var(--white); box-shadow: var(--shadow-sm); }
+.brand--chip .brand__logo { height: 58px; }
 @media (max-width: 420px) {
-  .brand__logo { height: 38px; }
+  .brand__logo { height: 44px; }
 }
 
 /* ───────── consultant photo in the About section ───────── */

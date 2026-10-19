@@ -333,12 +333,18 @@ export function Reviews() {
         </Reveal>
 
         <Reveal className="rsum">
-          <span className="rsum__stars" role="img" aria-label="5 out of 5 stars">
+          <span className="rsum__stars" role="img" aria-label={`${SITE.googleRating?.value ?? 5} out of 5 stars`}>
             <GoldStars count={5} size={26} />
           </span>
-          <span>
-            <strong>{SITE.reviews.length} Google reviews</strong> yahan dikhaye gaye hain, sabhi 5 star
-          </span>
+          {SITE.googleRating ? (
+            <span>
+              <strong>{SITE.googleRating.value} rating</strong> Google par, {SITE.googleRating.count} reviews se. Neeche kuch asli reviews dekhein.
+            </span>
+          ) : (
+            <span>
+              <strong>{SITE.reviews.length} Google reviews</strong> yahan dikhaye gaye hain, sabhi 5 star
+            </span>
+          )}
         </Reveal>
 
         <div
