@@ -93,7 +93,10 @@ export const metadata = {
       "max-snippet": -1,
     },
   },
-  verification: { google: SITE.googleVerification },
+  verification: {
+    google: SITE.googleVerification,
+    other: { "msvalidate.01": SITE.bingVerification },
+  },
   icons: { icon: "/favicon.ico", apple: "/apple-touch-icon.png" },
   formatDetection: { telephone: false },
   category: "local business",
@@ -111,7 +114,7 @@ export const viewport = {
   themeColor: "#172B4D",
 };
 
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID || SITE.gaId;
 
 export default function RootLayout({ children }) {
   return (

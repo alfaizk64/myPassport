@@ -8,6 +8,8 @@ export const SITE = {
   url: (
     process.env.NEXT_PUBLIC_SITE_URL || "https://my-passport-delta.vercel.app"
   ).replace(/\/$/, ""),
+  gaId: "G-2TWVEG42FE", // Google Analytics 4 measurement ID
+  bingVerification: "A851564D25A55E8AABC55810BFE7A8B3",
   googleVerification: "u0KGSVnKAEW7gyRvCt_pgQ6k6i7chWW3ab6JuXnvE-U",
 
   phone: {
