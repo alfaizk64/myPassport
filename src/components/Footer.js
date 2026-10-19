@@ -35,7 +35,7 @@ export default function Footer() {
                   external
                   event="social_click"
                   params={{ cta_location: "footer", network: "facebook" }}
-                  className="ftr__soc"
+                  className="ftr__soc flex items-center justify-center"
                   aria-label="Iqbal Khan Passport Consultant on Facebook"
                 >
                   <FacebookIcon size={20} />
@@ -47,7 +47,7 @@ export default function Footer() {
                   external
                   event="directions_click"
                   params={{ cta_location: "footer-social" }}
-                  className="ftr__soc"
+                  className="ftr__soc flex items-center justify-center"
                   aria-label="Our listing on Google Maps"
                 >
                   <MapPin size={20} aria-hidden="true" />
@@ -58,7 +58,7 @@ export default function Footer() {
                 external
                 event="whatsapp_click"
                 params={{ cta_location: "footer-social" }}
-                className="ftr__soc ftr__soc--wa"
+                className="ftr__soc ftr__soc--wa flex items-center justify-center"
                 aria-label="Chat on WhatsApp"
               >
                 <WhatsAppIcon size={20} />
