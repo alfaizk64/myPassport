@@ -48,6 +48,7 @@ export const SITE = {
   logo: "/PassportLogo.webp",
   googleReviewUrl: "https://g.page/r/CVx-uy-uA4giEAI/review", // opens the Google review form
   googleProfileUrl: "https://maps.app.goo.gl/AXPC2pmdq7R2MDmX7", // Google Maps listing shared by the owner
+  facebookUrl: "https://www.facebook.com/profile.php?id=61588720019452",
   googleRating: null, // e.g. { value: 4.9, count: 120 } from the real profile
   // Exact pin: in Google Maps open the business > Share > Embed a map > copy the src="..." URL here.
   mapEmbedUrl: null,

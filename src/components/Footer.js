@@ -1,6 +1,9 @@
 import Image from "next/image";
+import { MapPin } from "lucide-react";
 import Link from "next/link";
+import FacebookIcon from "@/components/FacebookIcon";
 import TrackedLink from "@/components/TrackedLink";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { FOOTER_SERVICE_LINKS, NAV } from "@/lib/content";
 import { ADDRESS_ONE_LINE, DISCLAIMER, SITE, telLink, waLink } from "@/lib/site";
 
@@ -25,6 +28,42 @@ export default function Footer() {
               Independent passport, PAN card and driving licence assistance in Dewas,
               Madhya Pradesh.
             </p>
+            <div className="ftr__social">
+              {SITE.facebookUrl && (
+                <TrackedLink
+                  href={SITE.facebookUrl}
+                  external
+                  event="social_click"
+                  params={{ cta_location: "footer", network: "facebook" }}
+                  className="ftr__soc"
+                  aria-label="Iqbal Khan Passport Consultant on Facebook"
+                >
+                  <FacebookIcon size={20} />
+                </TrackedLink>
+              )}
+              {SITE.googleProfileUrl && (
+                <TrackedLink
+                  href={SITE.googleProfileUrl}
+                  external
+                  event="directions_click"
+                  params={{ cta_location: "footer-social" }}
+                  className="ftr__soc"
+                  aria-label="Our listing on Google Maps"
+                >
+                  <MapPin size={20} aria-hidden="true" />
+                </TrackedLink>
+              )}
+              <TrackedLink
+                href={waLink()}
+                external
+                event="whatsapp_click"
+                params={{ cta_location: "footer-social" }}
+                className="ftr__soc ftr__soc--wa"
+                aria-label="Chat on WhatsApp"
+              >
+                <WhatsAppIcon size={20} />
+              </TrackedLink>
+            </div>
           </div>
 
           <div>

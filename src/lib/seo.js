@@ -1,5 +1,8 @@
 import { SITE } from "@/lib/site";
 
+// Official profiles that belong to this business, for schema.org sameAs.
+const profileLinks = () => [SITE.googleProfileUrl, SITE.facebookUrl].filter(Boolean);
+
 // English/Hinglish page -> its Hindi (Devanagari) twin, used for hreflang.
 export const HI_TWINS = {
   "/": "/hi/",
@@ -88,7 +91,7 @@ export function businessGraph() {
         itemOffered: { "@type": "Service", name },
       })),
     },
-    ...(SITE.googleProfileUrl && { sameAs: [SITE.googleProfileUrl] }),
+    ...(profileLinks().length && { sameAs: profileLinks() }),
     ...(SITE.hoursSchema && {
       openingHoursSpecification: SITE.hoursSchema.map((h) => ({
         "@type": "OpeningHoursSpecification",
@@ -181,7 +184,7 @@ export function personSchema() {
       "PAN card assistance",
       "Driving licence assistance",
     ],
-    ...(SITE.googleProfileUrl && { sameAs: [SITE.googleProfileUrl] }),
+    ...(profileLinks().length && { sameAs: profileLinks() }),
   };
 }
 

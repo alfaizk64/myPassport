@@ -1676,3 +1676,19 @@ body { padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px)); }
 .nf__txt small { font-size: 0.85rem; color: var(--saffron-ink); font-weight: 600; }
 .nf__more { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4rem 1.2rem; margin-top: 0.3rem; }
 .nf__more a { color: var(--navy); font-weight: 700; font-size: 0.95rem; text-decoration: underline; text-underline-offset: 4px; }
+
+/* footer social links */
+.ftr__social { display: flex; gap: 0.6rem; margin-top: 1rem; }
+.ftr__soc {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.86);
+  transition: background-color 0.25s, transform 0.25s var(--ease), color 0.25s;
+}
+.ftr__soc:hover { background: rgba(255, 255, 255, 0.16); color: #fff; transform: translateY(-2px); }
+.ftr__soc--wa:hover { background: var(--green); border-color: var(--green); }
