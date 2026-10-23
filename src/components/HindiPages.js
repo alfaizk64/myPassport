@@ -287,8 +287,8 @@ export function HindiServicePage({ page }) {
   ];
   const timeline = isCourt
     ? "मामले के अनुसार · तय समय का वादा नहीं"
-    : `${svc.timeline.normal} · ${svc.timeline.fast}`;
-  const price = `${svc.price.replace("Starting ", "")} से शुरू`;
+    : "आपके केस, अपॉइंटमेंट उपलब्धता और पासपोर्ट प्राधिकरण पर निर्भर करता है";
+  const price = "केस के हिसाब से अलग होती है";
 
   return (
     <div lang="hi" className="hi-page">

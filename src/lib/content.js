@@ -46,8 +46,8 @@ export const SERVICES = [
       "Old passport, for renewal",
       "Parents' details and consent, for minors",
     ],
-    price: "Starting ₹3000",
-    timeline: { normal: "15–21 days", fast: "Tatkal: 1–3 days" },
+    price: "Charges vary by case",
+    timeline: { normal: "Depends on your case and passport authorities", fast: "Tatkaal eligibility and processing depend on official rules" },
     inPerson:
       "Aapko Passport Seva Kendra ke appointment par documents verification, photo aur biometrics ke liye khud jaana hota hai. Hum aapko taiyar karte hain, par aapki jagah koi aur nahi ja sakta.",
     official: {
@@ -84,7 +84,7 @@ export const SERVICES = [
       "Documents supporting the correction",
     ],
     price: "Starting ₹299",
-    timeline: { normal: "3–7 days", fast: "e-PAN: same day" },
+    timeline: { normal: "3–7 days", fast: "e-PAN: same-day availability depends on eligibility and the applicable process" },
     inPerson:
       "Zyada tar steps online hote hain. Kuch cases mein signed form ya documents post se bhejne padte hain, ye hum shuru mein hi bata dete hain.",
     official: {
@@ -121,7 +121,7 @@ export const SERVICES = [
       "Existing licence, for renewal or duplicate",
     ],
     price: "Starting ₹3500",
-    timeline: { normal: "15–30 days", fast: "Priority slot guidance" },
+    timeline: { normal: "15–30 days", fast: "Appointment slot guidance, subject to availability" },
     inPerson:
       "Biometrics aur driving test RTO ya authorised centre par khud jaakar dene hote hain. Documents pehle se ready hon to visit aam taur par chhota rehta hai.",
     official: {
@@ -202,7 +202,7 @@ const startingPrice = (id) =>
 export const FAQS = [
   {
     q: "Passport banwane mein kitna time lagta hai Dewas mein?",
-    a: "Normal application mein aam taur par 15–21 working days aur Tatkal mein 1–3 days lagte hain, jab sab documents sahi hon. Ye typical time hai, guarantee nahi. Appointment, verification aur delivery passport authority ke control mein hai. Appointment booking se lekar submission tak hum guide karte hain.",
+    a: "Timeline aapke case, appointment availability aur passport authorities par depend karta hai, Tatkaal mein bhi eligibility aur processing official rules se tay hoti hai. Ye kisi bhi tarah ki guarantee nahi hai. Appointment, verification aur delivery passport authority ke control mein hai. Appointment booking se lekar submission tak hum guide karte hain.",
   },
   {
     q: "Iqbal Khan ka office kahan hai?",
@@ -242,7 +242,7 @@ export const FAQS = [
   },
   {
     q: "Aapki fees kitni hai?",
-    a: `Hamari service charge Passport ke liye ${startingPrice("passport")}, PAN card ke liye ${startingPrice("pan-card")} aur Driving Licence ke liye ${startingPrice("driving-licence")} se shuru hoti hai. Exact amount aapke case par depend karta hai aur kaam shuru karne se pehle WhatsApp par confirm hota hai. Government fees authority tay karti hai.`,
+    a: `Hamara Passport consultancy charge case ke hisaab se alag hota hai. PAN card ke liye ${startingPrice("pan-card")} aur Driving Licence ke liye ${startingPrice("driving-licence")} se shuru hoti hai. Exact amount aapke case par depend karta hai aur kaam shuru karne se pehle WhatsApp par confirm hota hai. Government fees authority tay karti hai.`,
   },
   {
     q: "Pehle kaun se documents bhejne hain?",

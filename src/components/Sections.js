@@ -8,6 +8,7 @@ import IdCardFlip from "@/components/IdCardFlip";
 import MapEmbed from "@/components/MapEmbed";
 import { Reveal, ScrollSteps, SectionTitle, Spot, Stagger, StaggerItem } from "@/components/Motion";
 import OpenNow from "@/components/OpenNow";
+import ReviewsCarousel from "@/components/ReviewsCarousel";
 import RoleSwitcher from "@/components/RoleSwitcher";
 import ServiceExplorer from "@/components/ServiceExplorer";
 import TrackedLink from "@/components/TrackedLink";
@@ -290,7 +291,7 @@ export function HowItWorks() {
 }
 
 /* ───────── Reviews: real Google reviews, word for word ───────── */
-const initials = (name) =>
+export const initials = (name) =>
   name
     .split(" ")
     .map((w) => w[0])
@@ -298,7 +299,7 @@ const initials = (name) =>
     .join("")
     .toUpperCase();
 
-function GoldStars({ count, size = 18 }) {
+export function GoldStars({ count, size = 18 }) {
   return Array.from({ length: count }).map((_, k) => (
     <Star key={k} size={size} fill="currentColor" aria-hidden="true" />
   ));
@@ -347,32 +348,7 @@ export function Reviews() {
           )}
         </Reveal>
 
-        <div
-          className="reviews-scroll"
-          role="region"
-          aria-label="Google reviews, side mein scroll karein"
-          tabIndex={0}
-        >
-          <Stagger className="reviews">
-            {SITE.reviews.map((r, i) => (
-              <StaggerItem key={r.name} className={`si${r.featured ? " si--feature" : ""}`}>
-                <figure className={`review${r.featured ? " review--feature" : ""}`}>
-                  <div className="review__head">
-                    <span className={`av av--${i % 4}`} aria-hidden="true">{initials(r.name)}</span>
-                    <div>
-                      <strong>{r.name}</strong>
-                      <span>{r.badge ? `${r.badge} · Google review` : "Google review"}</span>
-                    </div>
-                  </div>
-                  <div className="review__stars" role="img" aria-label={`${r.rating} out of 5 stars`}>
-                    <GoldStars count={r.rating} size={r.featured ? 22 : 18} />
-                  </div>
-                  <blockquote>{r.text}</blockquote>
-                </figure>
-              </StaggerItem>
-            ))}
-          </Stagger>
-        </div>
+        <ReviewsCarousel reviews={SITE.reviews} />
       </div>
     </section>
   );

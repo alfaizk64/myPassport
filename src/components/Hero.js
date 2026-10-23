@@ -35,8 +35,8 @@ export default function Hero() {
           </h1>
 
           <p className="lead">
-            Get guidance with applications, document requirements and appointment
-            preparation from Iqbal Khan Passport Consultant in Dewas.
+            <strong>Passport Consultant in Dewas</strong> — get guidance with applications,
+            document requirements and appointment preparation from Iqbal Khan.
           </p>
 
           <Up as="p" delay={0.2} className="hi">

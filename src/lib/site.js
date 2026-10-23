@@ -23,7 +23,7 @@ export const SITE = {
   },
 
   address: {
-    line1: "Muskan Beauty Palace, L-55 Supermarket",
+    line1: "Front of Rajiv Gandhi Statue, L-55, Super Market, Old Town, Gomti Nagar",
     city: "Dewas",
     region: "Madhya Pradesh",
     postalCode: "455001",
@@ -51,8 +51,8 @@ export const SITE = {
   googleReviewUrl: "https://g.page/r/CVx-uy-uA4giEAI/review", // opens the Google review form
   googleProfileUrl: "https://maps.app.goo.gl/AXPC2pmdq7R2MDmX7", // Google Maps listing shared by the owner
   facebookUrl: "https://www.facebook.com/profile.php?id=61588720019452",
-  // Real figures from the owner's Google Business Profile (checked 2026-10-19).
-  googleRating: { value: "5.0", count: 13 },
+  // Real figures from the owner's Google Business Profile (checked 2026-10-23).
+  googleRating: { value: "5.0", count: 15 },
   // Exact pin: in Google Maps open the business > Share > Embed a map > copy the src="..." URL here.
   mapEmbedUrl: null,
   photos: { consultant: "/iqbalKhanAboutSection.webp", office: null }, // e.g. "/images/iqbal-khan.jpg"
@@ -85,6 +85,27 @@ export const SITE = {
     { name: "Irshad Shaikh", rating: 5, text: "Excellent work" },
     { name: "Rajveer Singh", rating: 5, text: "provide proper guidance and have a experties" },
     { name: "Kunal Choudhary", rating: 5, text: "good experience nice work.👍👍" },
+    { name: "Century Snooker Academy Dewas", badge: "Local Guide", rating: 5, text: "Great experience, fastest work!" },
+    {
+      name: "Aman Shaikh",
+      rating: 5,
+      text: "Iqbal Khan Passport Consultant, Dewas – Excellent Service & Support!\n\nMera Iqbal Khan bhai ke saath passport banwane ka experience bahut hi achha raha. Documents ki taiyari se lekar appointment booking aur passport office verification tak, unhone har step par proper guidance aur full support diya. Unki sabse achhi baat yeh hai ki woh har process ko itni aasani aur detail mein samjhate hain ki kisi bhi tarah ki confusion nahi hoti.\n\nUnka behaviour bhi bahut friendly aur professional hai. Har doubt ka patiently jawab dete hain, sahi information dena aur poore process mein saath dena unki service ko aur bhi behtar banata hai. Unke knowledge aur experience ki wajah se passport banwane ka poora process mere liye kaafi easy aur tension-free raha.\n\nAgar aap Dewas mein passport banwana chahte hain aur ek reliable consultant ki talash mein hain, toh main Iqbal Khan Bhai ko personally recommend karunga. Yahan aapko sirf guidance hi nahi, balki har step par achha support bhi milta hai.\n\nThank you, Iqbal Khan Bhai, itni achhi service, cooperation aur support ke liye! 🙏🏼\n\nHighly Recommended for Passport Consultancy in Dewas!",
+    },
+    {
+      name: "Rajveer Tomar",
+      rating: 5,
+      text: "Dewas mein passport banwane ke liye Iqbal Khan Passport Consultant bahut hi achhe aur trustworthy consultant hain! Inka service dene ka tarika bahut professional aur supportive hai. Passport banwane ke har step mein proper guidance dete hain, chahe document verification ho, application submission, appointment booking ya passport office ki formalities.\n\nMujhe inki sabse achhi baat yeh lagi ki yeh har cheez clearly samjhate hain aur kisi bhi doubt ya query ke liye achhe se guide karte hain. Inka experience aur knowledge passport banwane ke poore process ko kaafi easy aur hassle-free bana deta hai, especially un logon ke liye jo pehli baar passport banwa rahe hain ya apni family ke liye apply kar rahe hain.\n\nAgar aap Dewas mein passport banwana chahte hain aur ek reliable, experienced aur trustworthy consultant ki talash mein hain, toh Iqbal Khan Passport Consultant definitely ek achha option hai. Inki service se bahut satisfaction mila. Highly recommended! 🙏🙏",
+    },
+    {
+      name: "Rehan Shaikh",
+      rating: 5,
+      text: "Mera Iqbal Khan Passport Consultant, Dewas ke saath experience bahut achha raha. Passport banwane ke liye documents collect karne se lekar unki preparation, appointment aur passport office verification tak, unhone har step par achhe se guide kiya. Sab kuch unhone itne achhe se samjhaya ki mujhe kahin bhi koi confusion nahi hoti.\n\nInka baat karne ka tarika bhi bahut achha hai aur jab bhi koi doubt hota tha, toh ve properly samjhate the aur help karte the. Inki knowledge aur experience ki wajah se poora process kaafi easy aur tension-free raha.\n\nAgar aap bhi Dewas mein passport banwana chahte hain, toh ek baar Iqbal Khan se zaroor contact karein. Main personally inki service recommend karunga. Bahut achhi service aur support ke liye thank you, Iqbal bhai! 🙏🙏",
+    },
+    {
+      name: "Ujjawal Ujjawal",
+      rating: 5,
+      text: "इकबाल खान पासपोर्ट कंसल्टेंट से मेरा अनुभव बहुत अच्छा रहा। इन्होंने पासपोर्ट से जुड़े काम में काफी मदद की और पूरी प्रक्रिया को आसान बना दिया। इनका व्यवहार भी बहुत अच्छा है और इन्होंने हर बात अच्छे से समझाई। पासपोर्ट से संबंधित किसी भी काम के लिए मैं इन्हें जरूर recommend करूँगा। 😊",
+    },
   ],
 
   contentReviewed: "17 October 2026",
