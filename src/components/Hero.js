@@ -22,21 +22,21 @@ export default function Hero() {
 
           <h1 id="hero-title">
             <span className="line">
-              <Words text="Your Documents." start={0.1} />
+              <Words text="Passport Consultant" start={0.1} />
             </span>
             <span className="line">
               <span className="hl">
-                <Words text="The Right Guidance." start={0.3} />
+                <Words text="in Dewas." start={0.3} />
               </span>
             </span>
             <span className="line">
-              <Words text="A Simpler Process." start={0.55} />
+              <Words text="Documents, Simplified." start={0.55} />
             </span>
           </h1>
 
           <p className="lead">
-            <strong>Passport Consultant in Dewas</strong> — get guidance with applications,
-            document requirements and appointment preparation from Iqbal Khan.
+            Get guidance with applications, document requirements and appointment
+            preparation from Iqbal Khan, your local passport consultant in Dewas.
           </p>
 
           <Up as="p" delay={0.2} className="hi">

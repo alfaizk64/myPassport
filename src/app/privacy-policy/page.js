@@ -26,9 +26,15 @@ export default function PrivacyPolicy() {
       <h2>What this website collects</h2>
       <p>
         This website has no accounts, no enquiry form and no document upload. We do not
-        ask you to enter personal details on the site. If website analytics is switched
-        on, it records anonymous usage such as pages viewed and which contact buttons
-        are tapped. It does not record your name, phone number or messages.
+        ask you to enter personal details on the site. We use Google Analytics to see
+        anonymous usage, such as which pages are viewed and which contact buttons are
+        tapped. It does not record your name, phone number or messages, and we have
+        turned off ad personalisation and Google signals for this data. Google processes
+        this data under its own privacy policy, available at{" "}
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+          policies.google.com/privacy
+        </a>
+        .
       </p>
 
       <h2>When you contact us</h2>
@@ -64,8 +70,8 @@ export default function PrivacyPolicy() {
 
       <h2>Cookies</h2>
       <p>
-        This website does not set cookies for advertising. If analytics is switched on,
-        it may use limited cookies to count visits.
+        This website does not set cookies for advertising. Google Analytics sets a small
+        number of cookies to count visits anonymously, as described above.
       </p>
 
       <h2>Changes</h2>

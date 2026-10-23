@@ -1,4 +1,4 @@
-import { Noto_Sans_Devanagari, Plus_Jakarta_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import Script from "next/script";
 import "./globals.css";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
@@ -11,13 +11,21 @@ import { BODY_SCRIPT } from "@/components/SiteScripts";
 import { businessGraph } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
-const sans = Plus_Jakarta_Sans({
-  subsets: ["latin"],
+// Self-hosted (files vendored in src/fonts/) so `next build` never depends on
+// reaching fonts.googleapis.com/fonts.gstatic.com. Both are the same variable
+// fonts next/font/google previously fetched at build time (latin / devanagari
+// subsets, regular style, weights 200-800 / 100-900 in one file each).
+const sans = localFont({
+  src: "../fonts/PlusJakartaSans-latin.woff2",
+  weight: "200 800",
+  style: "normal",
   display: "swap",
   variable: "--font-sans",
 });
-const hindi = Noto_Sans_Devanagari({
-  subsets: ["devanagari"],
+const hindi = localFont({
+  src: "../fonts/NotoSansDevanagari-devanagari.woff2",
+  weight: "100 900",
+  style: "normal",
   display: "swap",
   preload: false,
   variable: "--font-hi",

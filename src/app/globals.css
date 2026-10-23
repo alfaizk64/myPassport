@@ -1514,8 +1514,8 @@ body { padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px)); }
 .rcar__btn {
   display: grid;
   place-items: center;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   border: 1px solid var(--border);
   background: var(--white);
@@ -1710,8 +1710,8 @@ body { padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px)); }
 /* footer social links */
 .ftr__social { display: flex; gap: 0.6rem; margin-top: 1rem; }
 .ftr__soc {
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   display: grid;
   place-items: center;
   border-radius: 12px;

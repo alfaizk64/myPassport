@@ -7,6 +7,7 @@ export const GUIDES = [
   /* 1 ═════════════ DOCUMENTS LIST ═════════════ */
   {
     slug: "passport-documents-list",
+    published: "2026-10-19",
     path: "/guides/passport-documents-list/",
     service: "passport",
     title: "Passport Documents List in Hindi | Iqbal Khan",
@@ -100,6 +101,7 @@ export const GUIDES = [
   /* 2 ═════════════ APPOINTMENT ═════════════ */
   {
     slug: "passport-appointment-ki-taiyari",
+    published: "2026-10-19",
     path: "/guides/passport-appointment-ki-taiyari/",
     service: "passport",
     title: "Passport Appointment Ki Taiyari | Iqbal Khan",
@@ -191,6 +193,7 @@ export const GUIDES = [
   },
   {
     slug: "police-verification-kya-hota-hai",
+    published: "2026-10-19",
     path: "/guides/police-verification-kya-hota-hai/",
     service: "passport",
     title: "Police Verification Kya Hota Hai | Iqbal Khan",
@@ -287,6 +290,7 @@ export const GUIDES = [
   /* 4 ═════════════ NAME OR ADDRESS CHANGE ═════════════ */
   {
     slug: "passport-name-ya-address-change",
+    published: "2026-10-19",
     path: "/guides/passport-name-ya-address-change/",
     service: "passport",
     title: "Passport Name ya Address Change Kaise Karein | Iqbal Khan",
@@ -375,6 +379,7 @@ export const GUIDES = [
   /* 5 ═════════════ REJECT OR DELAY ═════════════ */
   {
     slug: "passport-reject-ya-delay-hone-ke-karan",
+    published: "2026-10-19",
     path: "/guides/passport-reject-ya-delay-hone-ke-karan/",
     service: "passport",
     title: "Passport Reject ya Delay Hone Ke Karan | Iqbal Khan",
@@ -468,6 +473,7 @@ export const GUIDES = [
   /* 6 ═════════════ FAKE AGENTS AND WEBSITES ═════════════ */
   {
     slug: "fake-passport-agent-aur-website-se-kaise-bachein",
+    published: "2026-10-19",
     path: "/guides/fake-passport-agent-aur-website-se-kaise-bachein/",
     service: "passport",
     title: "Fake Passport Agent se Kaise Bachein | Iqbal Khan",
@@ -556,6 +562,7 @@ export const GUIDES = [
   /* 7 ═════════════ PAN DOCUMENTS LIST ═════════════ */
   {
     slug: "pan-card-documents-list",
+    published: "2026-10-23",
     path: "/guides/pan-card-documents-list/",
     service: "pan-card",
     title: "PAN Card Documents List | Iqbal Khan",
@@ -629,6 +636,7 @@ export const GUIDES = [
   /* 8 ═════════════ E-PAN DOWNLOAD ═════════════ */
   {
     slug: "e-pan-card-download-kaise-kare",
+    published: "2026-10-23",
     path: "/guides/e-pan-card-download-kaise-kare/",
     service: "pan-card",
     title: "e-PAN Card Download Kaise Kare | Iqbal Khan",
@@ -699,6 +707,7 @@ export const GUIDES = [
   /* 9 ═════════════ DL DOCUMENTS LIST ═════════════ */
   {
     slug: "driving-licence-documents-list",
+    published: "2026-10-23",
     path: "/guides/driving-licence-documents-list/",
     service: "driving-licence",
     title: "Driving Licence Documents List | Iqbal Khan",
@@ -776,6 +785,7 @@ export const GUIDES = [
   /* 10 ═════════════ RTO VISIT AND TEST ═════════════ */
   {
     slug: "rto-visit-aur-driving-test-ki-taiyari",
+    published: "2026-10-23",
     path: "/guides/rto-visit-aur-driving-test-ki-taiyari/",
     service: "driving-licence",
     title: "RTO Visit aur Driving Test Ki Taiyari | Iqbal Khan",

@@ -108,8 +108,8 @@ export const SITE = {
     },
   ],
 
-  contentReviewed: "17 October 2026",
-  contentReviewedISO: "2026-10-17",
+  contentReviewed: "23 October 2026",
+  contentReviewedISO: "2026-10-23",
 };
 
 export const ADDRESS_ONE_LINE = `${SITE.address.line1}, ${SITE.address.city}, ${SITE.address.region} ${SITE.address.postalCode}`;

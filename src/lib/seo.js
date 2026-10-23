@@ -54,7 +54,7 @@ export function businessGraph() {
     name: SITE.name,
     alternateName: ["IK Passport Services", "इक़बाल खान पासपोर्ट कंसल्टेंट", "Iqbal Khan Passport Consultant Dewas"],
     url: `${SITE.url}/`,
-    logo: `${SITE.url}/android-chrome-512x512.png`,
+    logo: `${SITE.url}${SITE.logo}`,
     description:
       "Independent passport, PAN card and driving licence application assistance in Dewas, Madhya Pradesh.",
     telephone: SITE.phone.tel,
@@ -205,7 +205,9 @@ export function articleSchema(guide) {
     headline: guide.h1,
     description: guide.description,
     inLanguage: "en-IN",
-    datePublished: SITE.contentReviewedISO,
+    // datePublished is the guide's own authored date; dateModified tracks the
+    // site-wide content review date, since we don't track per-guide edit history.
+    ...(guide.published && { datePublished: guide.published }),
     dateModified: SITE.contentReviewedISO,
     mainEntityOfPage: `${SITE.url}${guide.path}`,
     author: { "@id": `${SITE.url}/#iqbal-khan` },
