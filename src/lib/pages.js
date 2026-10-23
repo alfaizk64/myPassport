@@ -421,9 +421,9 @@ export const PAGES = [
       "Ye maan lena ki bachche ko aana zaroori nahi hai",
     ],
     faqs: [
-      { q: "Kya dono parents ka present hona zaroori hai?", a: "Hamesha nahi. Agar sirf ek parent aata hai, to aam taur par doosre parent ka consent form chahiye hota hai. Aapke case mein kaunsa form lagega, ye hum bata dete hain." },
-      { q: "Kya bachche ko appointment par aana padta hai?", a: "Aam taur par haan, parent ya guardian ke saath. Har case mein exact requirement authority decide karti hai." },
-      { q: "Minor passport kitne time tak valid rehta hai?", a: "Minors ki validity adults se alag hoti hai, aur current rule official portal par likha hota hai." },
+      { q: "Kya dono parents ka present hona zaroori hai?", a: "Har minor passport application mein dono parents ka physically present hona zaroori nahi hota. Applicable rules ke according, kuch cases mein ek parent required consent form aur parents ke passport documents ke saath application submit kar sakta hai. Agar doosre parent ki consent available nahi hai, ya custody/separation ka case hai, toh additional documents required ho sakte hain. Apne case ke liye appointment se pehle official Passport Seva portal par current requirements verify karein." },
+      { q: "Kya bachche ko appointment par aana padta hai?", a: "Haan, minor passport applicant ko aam taur par scheduled appointment par Passport Seva Kendra (PSK) ya applicable Passport Office mein present hona hota hai. Bachche ke saath applicable parent ya legal guardian ko required original documents aur appointment receipt lekar jaana chahiye. Chhote bachchon ke liye photograph aur anya requirements alag ho sakti hain. Appointment se pehle official instructions check karein." },
+      { q: "Minor passport kitne time tak valid rehta hai?", a: "Minor passport ki validity bachche ki age aur passport category par depend karti hai. Aam taur par 15 saal se kam umar ke bachchon ko 5 saal ki validity ya 18 saal ki age tak, jo pehle ho, passport issue kiya ja sakta hai. 15–18 saal ke applicants ke liye applicable rules ke according options alag ho sakte hain. Apply karne se pehle current eligibility aur validity official Passport Seva portal par verify karein." },
     ],
     related: ["/passport-services-dewas/fresh-passport/", "/passport-services-dewas/renewal-reissue/", "/passport-services-dewas/tatkal/"],
   },
