@@ -1,16 +1,18 @@
 "use client";
 
-import * as m from "motion/react-m";
+import { useEffect, useRef } from "react";
 import { useMotionValue, useSpring, useTransform } from "motion/react";
 import { Check, ClipboardCheck, IdCard, Landmark, UserRound } from "lucide-react";
 import Icon from "@/components/Icon";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 
-// The card entrance below is plain CSS (see .hv-card-in in globals.css), not
-// Framer, for the same LCP reason as Hero.js: this sits in the initial
-// viewport. The pointer-tilt stays on Framer Motion — useMotionValue starts
-// at rotateX/rotateY: 0deg, a normal fully-visible state, so it never hides
-// anything or depends on JS finishing before first paint.
+// Card entrance uses plain CSS (see .hv-card-in in globals.css) — not Framer —
+// so cards are visible from first paint (LCP-safe, no JS dependency).
+//
+// The pointer-tilt drives rotateX/rotateY via a direct DOM subscription (not
+// m.div). This avoids the SSR→hydration style mismatch ("transform:none" →
+// "rotateX(0deg) rotateY(0deg)") that previously caused a large repaint
+// exactly at TTI, which Chrome recorded as the LCP candidate.
 const CHECKLIST = ["Proof of address", "Proof of date of birth", "Photo ID"];
 const cardStyle = (delay) => ({ "--hd": `${delay}s` });
 
@@ -19,6 +21,18 @@ export default function HeroVisual() {
   const my = useMotionValue(0);
   const rotateY = useSpring(useTransform(mx, [-0.5, 0.5], [-7, 7]), { stiffness: 110, damping: 18 });
   const rotateX = useSpring(useTransform(my, [-0.5, 0.5], [6, -6]), { stiffness: 110, damping: 18 });
+  const stageRef = useRef(null);
+
+  useEffect(() => {
+    const update = () => {
+      if (stageRef.current) {
+        stageRef.current.style.transform = `rotateX(${rotateX.get()}deg) rotateY(${rotateY.get()}deg)`;
+      }
+    };
+    const unsubX = rotateX.on("change", update);
+    const unsubY = rotateY.on("change", update);
+    return () => { unsubX(); unsubY(); };
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div
@@ -36,7 +50,7 @@ export default function HeroVisual() {
     >
       <div className="hv">
         <div className="hv__glow" />
-        <m.div className="hv__stage" style={{ rotateX, rotateY }}>
+        <div ref={stageRef} className="hv__stage">
           <div className="hd hd--book hv-card-in" style={cardStyle(0.15)}>
             <svg className="stamp__ring" viewBox="0 0 100 100">
               <defs>
@@ -101,7 +115,7 @@ export default function HeroVisual() {
             <span className="wa"><WhatsAppIcon /></span>
             <span>Hello, I need guidance with a passport application in Dewas.</span>
           </div>
-        </m.div>
+        </div>
       </div>
     </div>
   );
