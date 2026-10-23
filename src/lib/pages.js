@@ -313,11 +313,11 @@ export const PAGES = [
       "Lost passport ko simple renewal samajh lena",
     ],
     faqs: [
-      { q: "Passport renew kab karwana chahiye?", a: "Portal jitni jaldi allow kare, utni jaldi. Kai countries travel ke time par kuch mahine ki validity bachi hone ki shart rakhte hain, isliye jaldi renew karne se problem nahi aati." },
-      { q: "Passport kho gaya hai to kya karein?", a: "Lost passport ke liye ek additional official process hota hai, jisme police report ya affidavit lag sakta hai. Aap hume contact kijiye, hum paperwork aur re-issue application mein guide karenge." },
-      { q: "Renewal ke saath naam ya address badal sakte hain kya?", a: "Haan, lekin change ko support karne wale documents chahiye. Aapke case mein authority kaunse proofs accept karti hai, ye hum bata dete hain." },
+      { q: "Passport renew kab karwana chahiye?", a: "Passport ki expiry date check karke renewal ki planning pehle se karna achha rehta hai. Agar aapka passport expire hone wala hai, expire ho chuka hai, pages khatam ho gaye hain ya passport ki validity aapki upcoming travel requirements ke liye sufficient nahi hai, toh re-issue ki zaroorat ho sakti hai. Dewas mein hum application process, documents checklist aur appointment guidance mein assistance dete hain. Apply karne se pehle apne case ke liye official Passport Seva portal par requirements check karein." },
+      { q: "Passport kho gaya ho to kya karein?", a: "Agar aapka passport kho gaya hai, toh sabse pehle loss report karne aur applicable police report ya other required documents ke baare mein official instructions check karein. Lost passport ke case mein fresh passport ke bajay re-issue application ki process apply ho sakti hai, jo aapke case par depend karti hai. Hum Dewas mein document checklist aur application process samajhne mein assistance dete hain. Final requirements aur decision passport authorities ke hote hain." },
+      { q: "Renewal ke saath naam ya address badal sakte hain kya?", a: "Haan, passport re-issue ke through eligible cases mein name ya address details update karwane ke liye apply kiya ja sakta hai. Iske liye applicable supporting documents dene hote hain, jaise address proof ya name change ke liye relevant proof. Required documents aapke change aur individual case par depend karte hain. Hum Dewas mein document checklist aur application process mein assistance dete hain. Apply karne se pehle official Passport Seva portal par current requirements verify karein." },
     ],
-    related: ["/passport-services-dewas/lost-passport/", "/passport-services-dewas/court-case-passport/", "/passport-services-dewas/tatkal/", "/passport-services-dewas/fresh-passport/"],
+    related: ["/passport-services-dewas/fresh-passport/", "/passport-services-dewas/tatkal/", "/passport-services-dewas/lost-passport/", "/passport-services-dewas/court-case-passport/"],
   },
   {
     path: "/passport-services-dewas/tatkal/",
