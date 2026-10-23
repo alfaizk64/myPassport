@@ -552,6 +552,300 @@ export const GUIDES = [
       "/passport-services-dewas/tatkal/",
     ],
   },
+
+  /* 7 ═════════════ PAN DOCUMENTS LIST ═════════════ */
+  {
+    slug: "pan-card-documents-list",
+    path: "/guides/pan-card-documents-list/",
+    service: "pan-card",
+    title: "PAN Card Documents List | Iqbal Khan",
+    description:
+      "PAN card ke liye kaun se documents chahiye? New PAN, correction aur e-PAN ke liye identity, address aur date of birth proof ki checklist, Hinglish mein.",
+    h1: "PAN card ke liye kaun se documents chahiye",
+    hindi: "पैन कार्ड के लिए ज़रूरी दस्तावेज़ों की सूची: पहचान, पता और जन्म तिथि प्रमाण",
+    intro: [
+      "PAN card banwane ya correction karwane se pehle sabse zyada pucha jane wala sawal yahi hai: kaun se documents lagenge. Jawab is par depend karta hai ki aapko naya PAN chahiye, kisi detail mein correction, ya duplicate.",
+      "General list yahan di gayi hai. Exact document kis case mein chalega, ye official portal (protean, UTIITSL ya incometax.gov.in, aap jahan se apply kar rahe hain) par apni category ke hisaab se zaroor confirm kar lein.",
+    ],
+    sections: [
+      {
+        h2: "Proof of identity",
+        paras: [
+          "Identity proof wahi naam dikhana chahiye jo aap application mein bhar rahe hain. Spelling mein chhota sa fark bhi aage dikkat de sakta hai.",
+        ],
+        list: [
+          "Aadhaar card",
+          "Voter ID ya driving licence, jahan portal ki list mein ho",
+          "Portal ki list ke baaki accepted documents",
+        ],
+      },
+      {
+        h2: "Proof of address aur date of birth",
+        paras: [
+          "Address proof mein current address hona chahiye. Date of birth ka proof sabse sensitive document hai, kyunki PAN aur Aadhaar ki date mismatch hone par verification atak sakti hai.",
+        ],
+        list: [
+          "Aadhaar card, aam taur par dono (identity aur address) ke liye chalta hai",
+          "Bijli, paani ya gas ka bill, aam taur par recent",
+          "Birth certificate ya school leaving certificate, date of birth ke liye",
+        ],
+      },
+      {
+        h2: "Photo, signature aur instant e-PAN",
+        paras: [
+          "Physical PAN card ke liye photo aur signature chahiye, jo portal ke size aur format rules follow karte hon. Instant e-PAN ek alag, tez route hai jo sabke liye available nahi hota.",
+        ],
+        list: [
+          "Passport-size photograph aur signature, physical card ke liye",
+          "Aadhaar-linked, active mobile number, instant e-PAN ke liye",
+          "Correction ke liye: jo detail badalni hai uska supporting proof, jaise naam ke liye marriage certificate",
+        ],
+      },
+      {
+        h2: "Documents ready karne ke tips",
+        paras: [
+          "Sabse zaroori baat ye hai ki naam aur date of birth Aadhaar se bilkul match karein, kyunki mismatch application mein sabse zyada dikkat deta hai. Scans saaf hon aur size limit ke andar hon.",
+          "Agar samajh na aaye ki aapke case mein kya lagega, to Iqbal Khan Passport Consultant, Dewas aapko case ke hisaab se checklist banane mein madad karta hai. Hum sarkari office nahi hain, aur final faisla income tax authority ka hota hai.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Kya PAN card ke liye sirf Aadhaar kaafi hai?",
+        a: "Zyada tar cases mein Aadhaar identity aur address, dono proof ke taur par chalta hai, lekin date of birth ke liye alag document bhi maanga ja sakta hai. Aapke case mein kya lagega, ye official portal par apni category chun kar confirm karein.",
+      },
+      {
+        q: "Correction ke liye kaun se documents chahiye?",
+        a: "Jo bhi detail badalni hai, uska supporting proof chahiye, jaise naam ke liye marriage certificate ya date of birth ke liye birth certificate. Baaki existing PAN details aur identity proof bhi saath lagte hain.",
+      },
+      {
+        q: "Instant e-PAN ke liye alag se document bhejne padte hain kya?",
+        a: "Nahi, ye Aadhaar aur uske saath linked mobile number se hota hai, agar aap is route ke liye eligible hon. Eligible na hone par standard application ka route lena padta hai, jisme upar di gayi list ke documents lagte hain.",
+      },
+    ],
+    related: ["/pan-card-services-dewas/", "/pan-card-services-dewas/correction/"],
+  },
+
+  /* 8 ═════════════ E-PAN DOWNLOAD ═════════════ */
+  {
+    slug: "e-pan-card-download-kaise-kare",
+    path: "/guides/e-pan-card-download-kaise-kare/",
+    service: "pan-card",
+    title: "e-PAN Card Download Kaise Kare | Iqbal Khan",
+    description:
+      "e-PAN card download kaise karein? Instant e-PAN aur protean/NSDL se bana PAN, dono ke liye official steps aur common dikkatein, simple Hinglish mein.",
+    h1: "e-PAN card download kaise karein",
+    hindi: "ई-पैन कार्ड डाउनलोड करने का तरीका: इंस्टेंट ई-पैन और सामान्य आवेदन, दोनों के लिए",
+    intro: [
+      "e-PAN PAN card ka official digital version hai aur zyada tar jagah physical card jaisa hi valid hota hai. Dikkat tab hoti hai jab pata nahi chalta ki download kahan se karna hai, kyunki ye is par depend karta hai ki aapka PAN kaise bana tha.",
+      "Yahan general route batayein gaye hain. Exact page aur steps portal time ke saath badal sakte hain, isliye official website par jaakar hi aage badhein.",
+    ],
+    sections: [
+      {
+        h2: "Pehle ye confirm karein: aapka PAN kaise bana tha",
+        paras: [
+          "Agar aapne Income Tax e-filing portal se instant e-PAN liya tha (sirf Aadhaar ke through), to use wahin se download karte hain. Agar aapka PAN protean (pehle NSDL) ya UTIITSL ke through bana tha, to download bhi usi portal se hota hai. Dono route alag hain, isliye pehle apna case confirm kar lein.",
+        ],
+      },
+      {
+        h2: "Instant e-PAN download karna",
+        paras: [
+          "Income Tax e-filing portal par instant e-PAN ka option milta hai, jahan PAN ya Aadhaar number, date of birth aur OTP se verify karke PDF download hoti hai.",
+        ],
+        list: [
+          "Income Tax e-filing website par jaayein aur instant e-PAN ka section dhundhein",
+          "PAN ya Aadhaar number aur date of birth bharein",
+          "Aadhaar-linked mobile number par aaya OTP enter karein",
+          "PDF download karein, jo password-protected hoti hai",
+        ],
+      },
+      {
+        h2: "Protean ya UTIITSL se bana PAN download karna",
+        paras: [
+          "In portals par PAN number ya acknowledgement number, date of birth aur captcha se verify hota hai, uske baad OTP bhi lag sakta hai.",
+        ],
+        list: [
+          "Protean ya UTIITSL ki official website par e-PAN download section dhundhein",
+          "PAN ya acknowledgement number aur date of birth bharein",
+          "OTP ya captcha se verify karein",
+          "PDF download karein",
+        ],
+      },
+      {
+        h2: "PDF nahi khul raha ya aam dikkatein",
+        paras: [
+          "e-PAN ki PDF password-protected hoti hai, aam taur par date of birth DDMMYYYY format mein password hota hai, lekin exact format portal par hi confirm karein. Kuch downloads free hote hain aur kuch samay ya count ki limit ke baad chhoti si fee lag sakti hai, jo amount authority tay karti hai.",
+          "Agar OTP nahi aa raha, to check karein ki mobile number Aadhaar se linked aur active hai ya nahi. Dikkat bani rahe to Iqbal Khan Passport Consultant, Dewas aapko sahi portal aur steps batane mein madad karta hai.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "e-PAN download karne ke liye konsi website sahi hai?",
+        a: "Ye is par depend karta hai ki aapka PAN kaise bana tha: Aadhaar-based instant e-PAN Income Tax e-filing portal se, aur protean ya UTIITSL se bana PAN unki apni website se download hota hai. Confused hon to hum apna case samjhakar sahi portal batane mein madad karte hain.",
+      },
+      {
+        q: "e-PAN download karna free hai kya?",
+        a: "Zyada tar cases mein issue hone ke kuch samay tak free hota hai, uske baad chhoti si fee lag sakti hai. Exact amount aur time limit badal sakte hain, isliye official portal par hi confirm karein.",
+      },
+      {
+        q: "e-PAN ki PDF ka password kya hota hai?",
+        a: "Aam taur par date of birth DDMMYYYY format mein hoti hai, lekin ye bhi portal ke hisaab se thoda alag ho sakta hai. Download page par diya gaya instruction follow karein.",
+      },
+    ],
+    related: ["/pan-card-services-dewas/", "/pan-card-services-dewas/correction/"],
+  },
+
+  /* 9 ═════════════ DL DOCUMENTS LIST ═════════════ */
+  {
+    slug: "driving-licence-documents-list",
+    path: "/guides/driving-licence-documents-list/",
+    service: "driving-licence",
+    title: "Driving Licence Documents List | Iqbal Khan",
+    description:
+      "Driving licence ke liye kaun se documents chahiye? Learner's, permanent, renewal aur duplicate DL ki checklist, simple Hinglish mein, Dewas se.",
+    h1: "Driving licence ke liye kaun se documents chahiye",
+    hindi: "ड्राइविंग लाइसेंस के लिए ज़रूरी दस्तावेज़ों की सूची: लर्नर से लेकर रिन्यूअल तक",
+    intro: [
+      "Driving licence ka document kaunsa lagega, ye is par depend karta hai ki aap kis stage par hain: pehli baar learner's licence, usse permanent licence, ya expiry ke baad renewal aur duplicate. Is guide mein sab stages ki list ek jagah di gayi hai.",
+      "Exact list RTO aur state ke hisaab se thodi alag ho sakti hai. Apply karne se pehle official Sarathi portal (sarathi.parivahan.gov.in) par apni state aur category ki current list ek baar zaroor dekh lein.",
+    ],
+    sections: [
+      {
+        h2: "Learner's licence ke liye",
+        list: [
+          "Proof of age",
+          "Proof of address",
+          "Passport-size photographs",
+          "Medical declaration, jahan vehicle category ke hisaab se lagu ho",
+        ],
+      },
+      {
+        h2: "Permanent licence ke liye",
+        paras: [
+          "Permanent licence, learner's licence ke upar banta hai, isliye uske documents bhi saath lagte hain.",
+        ],
+        list: [
+          "Learner's licence (valid honi chahiye)",
+          "Proof of address, agar learner's licence banne ke baad badla ho",
+          "Passport-size photographs",
+        ],
+      },
+      {
+        h2: "Renewal ke liye",
+        list: [
+          "Existing driving licence",
+          "Proof of address",
+          "Passport-size photographs",
+          "Medical declaration, jahan lagu ho (jaise ek certain age ke baad)",
+        ],
+      },
+      {
+        h2: "Duplicate ya address change ke liye",
+        list: [
+          "Lost ya damaged licence ki details",
+          "Police complaint ya affidavit, jahan portal maange",
+          "Address change ke liye naye address ka proof",
+        ],
+      },
+      {
+        h2: "Documents ready karne ke tips",
+        paras: [
+          "Naam aur address application aur proof mein ek jaise hone chahiye. Photos clear aur recent hon. Kisi bhi stage par apply karne se pehle official portal par list ek baar confirm kar lein.",
+          "Apna case samajh na aaye to Iqbal Khan Passport Consultant, Dewas aapko stage ke hisaab se checklist banane mein madad karta hai. Hum sarkari office nahi hain, aur final faisla transport department ka hota hai.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Learner's aur permanent licence ke documents alag hote hain kya?",
+        a: "Permanent licence ke liye learner's licence hi sabse zaroori document hota hai, uske saath address proof aur photos lagte hain. Agar address badal gaya ho to naya proof bhi dena padta hai.",
+      },
+      {
+        q: "Renewal ke liye medical certificate hamesha lagta hai kya?",
+        a: "Nahi, ye vehicle category aur applicant ki age par depend karta hai. Kai cases mein ek certain age ke baad medical declaration maangi jaati hai. Apna case portal par confirm kar lein.",
+      },
+      {
+        q: "Licence kho gaya ho to original licence ke bina bhi kaam ho sakta hai kya?",
+        a: "Haan, duplicate application mein lost licence ki details aur aam taur par police complaint ya affidavit chahiye, original ki zaroorat nahi hoti. Exact requirement state ke hisaab se thodi alag ho sakti hai.",
+      },
+    ],
+    related: ["/driving-licence-services-dewas/", "/driving-licence-services-dewas/learners-licence/", "/driving-licence-services-dewas/renewal-duplicate/"],
+  },
+
+  /* 10 ═════════════ RTO VISIT AND TEST ═════════════ */
+  {
+    slug: "rto-visit-aur-driving-test-ki-taiyari",
+    path: "/guides/rto-visit-aur-driving-test-ki-taiyari/",
+    service: "driving-licence",
+    title: "RTO Visit aur Driving Test Ki Taiyari | Iqbal Khan",
+    description:
+      "RTO visit aur driving test mein kya hota hai, kya saath le jayein aur aam galtiyan. Learner's test ho ya permanent licence test, Dewas se guidance.",
+    h1: "RTO visit aur driving test ki taiyari kaise karein",
+    hindi: "आरटीओ विज़िट और ड्राइविंग टेस्ट की तैयारी: क्या साथ ले जाएँ और क्या उम्मीद करें",
+    intro: [
+      "Online application ke baad driving licence process mein jo ek step khud jaakar karna padta hai, wo hai RTO ya authorised centre ki visit: learner's test ho ya permanent licence ka driving test. Yahan taiyari hi ek visit mein kaam poora karne ki sabse badi chaabi hai.",
+      "Ye general jaankari hai. Exact process RTO aur state ke hisaab se thoda alag ho sakta hai, isliye apne slot confirmation mein diye gaye instructions zaroor padhein.",
+    ],
+    sections: [
+      {
+        h2: "Visit se pehle kya check karein",
+        list: [
+          "Application aur documents mein naam, date of birth aur address ek jaise hon",
+          "Learner's licence valid ho, agar permanent licence ke liye test dene jaa rahe hain",
+          "Slot ka din, samay aur location confirm kar lein",
+          "Jis vehicle se test dena hai, wo chalu haalat mein ho",
+        ],
+      },
+      {
+        h2: "Saath kya le jayein",
+        list: [
+          "Slot booking ya application ki receipt ka print",
+          "Address aur age proof ke original documents",
+          "Learner's licence, permanent licence test ke liye",
+          "Medical declaration, jahan lagu ho",
+        ],
+      },
+      {
+        h2: "RTO mein kya hota hai",
+        paras: [
+          "Learner's test aam taur par computer-based hota hai, jisme road signs aur traffic rules ke sawal aate hain. Permanent licence ke test mein ek official aapke saath gaadi mein basic driving skills check karta hai, jaise control, parking aur signals.",
+          "Dono mein pass hone ka ek minimum score ya standard hota hai, jo official rules tay karte hain. Pass hone ke baad licence process aage badhta hai, aur fail hone par dobara slot book karna padta hai.",
+        ],
+      },
+      {
+        h2: "Aam galtiyan jo test rok deti hain",
+        list: [
+          "Road signs aur rules revise kiye bina test par pahunchna",
+          "Original documents ke bajay sirf photocopy le jaana",
+          "Learner's licence expire ho chuki hona",
+          "Der se pahunchna ya slot time miss kar dena",
+        ],
+      },
+      {
+        h2: "Taiyari mein hum kaise madad karte hain",
+        paras: [
+          "Hum aapke documents pehle check karte hain, batate hain test ke liye kya revise karna hai aur slot booking mein guide karte hain. Actual test dena aapko khud hota hai, koi aur aapki jagah nahi de sakta.",
+          "Hum sarkari office nahi hain, aur test pass hoga ya nahi, ye transport department tay karta hai. Agar aap chahte hain ki taiyari mein koi aapke saath ho, to Dewas mein hum se WhatsApp par baat kar sakte hain.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Driving test mein kya kya puchha ya check kiya jata hai?",
+        a: "Learner's test mein road signs aur traffic rules ke sawal aate hain, computer par. Permanent licence ke test mein ek official gaadi mein basic driving skills, jaise control aur parking, check karta hai.",
+      },
+      {
+        q: "Test fail ho jaye to kya hota hai?",
+        a: "Dobara slot book karna padta hai aur phir se test dena hota hai. Kitne dinon baad dobara try kar sakte hain, ye official rules tay karte hain.",
+      },
+      {
+        q: "Kya koi aur meri jagah test de sakta hai?",
+        a: "Nahi. Test khud dena zaroori hai, kyunki licence aapke naam par issue hota hai aur identity verify ki jaati hai.",
+      },
+    ],
+    related: ["/driving-licence-services-dewas/learners-licence/", "/driving-licence-services-dewas/renewal-duplicate/", "/driving-licence-services-dewas/"],
+  },
 ];
 
 export const getGuide = (slug) => GUIDES.find((g) => g.slug === slug);
