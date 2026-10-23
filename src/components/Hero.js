@@ -2,9 +2,25 @@ import { ArrowRight } from "lucide-react";
 import { WhatsAppButton } from "@/components/Cta";
 import HeroVisual from "@/components/HeroVisual";
 import Icon from "@/components/Icon";
-import { Up, Words } from "@/components/Motion";
 import OpenNow from "@/components/OpenNow";
 import { HERO_POINTS } from "@/lib/content";
+
+// Server component: everything here is visible on first paint (plain markup,
+// CSS-only entrance). See the "Hero entrance" note in globals.css for why —
+// this content sits in the initial viewport and is Google's LCP candidate.
+function HWords({ text, start = 0 }) {
+  return text.split(" ").map((w, i) => (
+    <span key={`${w}-${i}`}>
+      <span className="hw">
+        <span className="hw__in" style={{ "--hd": `${(start + i * 0.07).toFixed(2)}s` }}>
+          {w}
+        </span>
+      </span>{" "}
+    </span>
+  ));
+}
+
+const riseStyle = (delay) => ({ "--hd": `${delay}s` });
 
 export default function Hero() {
   return (
@@ -16,21 +32,21 @@ export default function Hero() {
       <span className="hero__bgword" lang="hi" aria-hidden="true">देवास</span>
       <div className="container hero__grid">
         <div className="hero__copy">
-          <Up as="p" delay={0.05} className="eyebrow">
+          <p className="eyebrow hero-rise" style={riseStyle(0.05)}>
             Passport • PAN Card • Driving Licence · Dewas
-          </Up>
+          </p>
 
           <h1 id="hero-title">
             <span className="line">
-              <Words text="Passport Consultant" start={0.1} />
+              <HWords text="Passport Consultant" start={0.1} />
             </span>
             <span className="line">
               <span className="hl">
-                <Words text="in Dewas." start={0.3} />
+                <HWords text="in Dewas." start={0.3} />
               </span>
             </span>
             <span className="line">
-              <Words text="Documents, Simplified." start={0.55} />
+              <HWords text="Documents, Simplified." start={0.55} />
             </span>
           </h1>
 
@@ -39,12 +55,12 @@ export default function Hero() {
             preparation from Iqbal Khan, your local passport consultant in Dewas.
           </p>
 
-          <Up as="p" delay={0.2} className="hi">
+          <p className="hi hero-rise" style={riseStyle(0.2)}>
             Passport, PAN Card aur Driving Licence banwana hai? Befikar raho, hum form
             filling se lekar final document tak guide karte hain.
-          </Up>
+          </p>
 
-          <Up delay={0.3} className="hero__cta">
+          <div className="hero__cta hero-rise" style={riseStyle(0.3)}>
             <WhatsAppButton
               location="hero"
               className="btn btn--wa btn--lg"
@@ -56,13 +72,13 @@ export default function Hero() {
               Explore Our Services
               <ArrowRight className="arrow" size={20} aria-hidden="true" />
             </a>
-          </Up>
+          </div>
 
-          <Up delay={0.4} className="hero__status">
+          <div className="hero__status hero-rise" style={riseStyle(0.4)}>
             <OpenNow />
-          </Up>
+          </div>
 
-          <Up as="ul" delay={0.5} className="hero__points" aria-label="Why people choose us">
+          <ul className="hero__points hero-rise" style={riseStyle(0.5)} aria-label="Why people choose us">
             {HERO_POINTS.map((p) => (
               <li key={p.text}>
                 <span className="ico">
@@ -71,7 +87,7 @@ export default function Hero() {
                 {p.text}
               </li>
             ))}
-          </Up>
+          </ul>
         </div>
 
         <HeroVisual />

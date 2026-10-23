@@ -927,7 +927,10 @@ body { padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px)); }
 
 /* ───────── Legal pages + 404 ───────── */
 .legal { padding-block: clamp(40px, 6vw, 80px) clamp(64px, 8vw, 112px); }
-.legal__in { max-width: 760px; display: grid; gap: 1.1rem; }
+.legal__in { max-width: 760px; min-width: 0; display: grid; gap: 1.1rem; }
+.legal p,
+.legal li,
+.legal a { overflow-wrap: anywhere; }
 .legal h1 { font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem); }
 .legal h2 { font-size: 1.4rem; margin-top: 1.2rem; }
 .legal ul { list-style: disc; padding-left: 1.3rem; display: grid; gap: 0.4rem; }
@@ -1003,6 +1006,33 @@ body { padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px)); }
 /* hero: headline words, ambient mesh */
 .w { display: inline-block; overflow: hidden; vertical-align: bottom; padding-bottom: 0.1em; margin-bottom: -0.1em; }
 .w__in { display: inline-block; will-change: transform; }
+
+/* ───────── Hero entrance: pure CSS, never gated behind JS ─────────
+   The hero sits in the initial viewport, so whatever is largest inside it
+   (almost always the H1) is Google's Largest Contentful Paint candidate.
+   Chrome excludes opacity:0 / clipped-out elements from LCP, so hiding this
+   text until a JS chunk loads and runs (as Framer Motion's `initial` state
+   does) can delay LCP past the measurement window on a slow connection and
+   get reported as a dropped/failed metric. Framer Motion stays everywhere
+   else on the site (below-the-fold content is never an LCP candidate). */
+@keyframes heroWordIn { from { transform: translateY(115%); } to { transform: translateY(0); } }
+@keyframes heroRiseIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+.hw { display: inline-block; overflow: hidden; vertical-align: bottom; padding-bottom: 0.1em; margin-bottom: -0.1em; }
+.hw__in { display: inline-block; animation: heroWordIn 0.75s var(--ease) both; animation-delay: var(--hd, 0s); }
+.hero-rise { animation: heroRiseIn 0.7s var(--ease) both; animation-delay: var(--hd, 0s); }
+@keyframes heroCardIn { from { opacity: 0; transform: translateY(30px) scale(0.96); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes heroRowIn { from { opacity: 0; transform: translateX(-10px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes heroTickIn { 0% { transform: scale(0); } 70% { transform: scale(1.18); } 100% { transform: scale(1); } }
+.hv-card-in { animation: heroCardIn 0.85s var(--ease) both; animation-delay: var(--hd, 0s); }
+.hv-row-in { animation: heroRowIn 0.45s var(--ease) both; animation-delay: var(--hd, 0s); }
+.hv-tick-in { animation: heroTickIn 0.4s var(--ease) both; animation-delay: var(--hd, 0s); }
+@media (prefers-reduced-motion: reduce) {
+  .hw__in,
+  .hero-rise,
+  .hv-card-in,
+  .hv-row-in,
+  .hv-tick-in { animation: none; }
+}
 .hero__mesh { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
 .hero__mesh span { position: absolute; border-radius: 50%; filter: none; }
 .hero__mesh span:nth-child(1) { width: 640px; height: 640px; right: -200px; top: -220px; background: radial-gradient(closest-side, rgba(232, 120, 53, 0.3), transparent); animation: drift 18s ease-in-out infinite alternate; }

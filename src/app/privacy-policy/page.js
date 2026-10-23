@@ -26,16 +26,34 @@ export default function PrivacyPolicy() {
       <h2>What this website collects</h2>
       <p>
         This website has no accounts, no enquiry form and no document upload. We do not
-        ask you to enter personal details on the site. We use Google Analytics to see
-        anonymous usage, such as which pages are viewed and which contact buttons are
-        tapped. It does not record your name, phone number or messages, and we have
-        turned off ad personalisation and Google signals for this data. Google processes
-        this data under its own privacy policy, available at{" "}
-        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
-          policies.google.com/privacy
-        </a>
-        .
+        ask you to enter personal details on the site, other than an optional search box
+        on the FAQ section to find a question faster.
       </p>
+      <p>
+        We use two analytics tools to understand and improve the site. Neither is linked
+        to your name, phone number or the documents you handle elsewhere.
+      </p>
+      <ul>
+        <li>
+          <strong>Google Analytics</strong> records anonymous usage, such as which pages
+          are viewed and which contact buttons are tapped. We have turned off ad
+          personalisation and Google signals for this data. See Google&apos;s policy at{" "}
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+            policies.google.com/privacy
+          </a>
+          .
+        </li>
+        <li>
+          <strong>Microsoft Clarity</strong> records how visitors move through and scroll
+          the site (session recordings and heatmaps), so we can see where people get
+          stuck. It masks the content of text fields by default and does not knowingly
+          collect what you type into the FAQ search box. See Microsoft&apos;s policy at{" "}
+          <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener noreferrer">
+            privacy.microsoft.com/privacystatement
+          </a>
+          .
+        </li>
+      </ul>
 
       <h2>When you contact us</h2>
       <p>
@@ -70,8 +88,9 @@ export default function PrivacyPolicy() {
 
       <h2>Cookies</h2>
       <p>
-        This website does not set cookies for advertising. Google Analytics sets a small
-        number of cookies to count visits anonymously, as described above.
+        This website does not set cookies for advertising. Google Analytics and Microsoft
+        Clarity each set a small number of cookies to recognise repeat visits, as
+        described above.
       </p>
 
       <h2>Changes</h2>

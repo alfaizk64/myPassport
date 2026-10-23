@@ -4,24 +4,15 @@ import * as m from "motion/react-m";
 import { useMotionValue, useSpring, useTransform } from "motion/react";
 import { Check, ClipboardCheck, IdCard, Landmark, UserRound } from "lucide-react";
 import Icon from "@/components/Icon";
-import { EASE } from "@/components/Motion";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 
-const list = { hidden: {}, show: { transition: { staggerChildren: 0.16, delayChildren: 1.1 } } };
-const row = {
-  hidden: { opacity: 0, x: -10 },
-  show: { opacity: 1, x: 0, transition: { duration: 0.45, ease: EASE } },
-};
-const tick = {
-  hidden: { scale: 0 },
-  show: { scale: 1, transition: { type: "spring", stiffness: 420, damping: 16 } },
-};
+// The card entrance below is plain CSS (see .hv-card-in in globals.css), not
+// Framer, for the same LCP reason as Hero.js: this sits in the initial
+// viewport. The pointer-tilt stays on Framer Motion — useMotionValue starts
+// at rotateX/rotateY: 0deg, a normal fully-visible state, so it never hides
+// anything or depends on JS finishing before first paint.
 const CHECKLIST = ["Proof of address", "Proof of date of birth", "Photo ID"];
-const rise = (delay) => ({
-  initial: { opacity: 0, y: 30, scale: 0.96 },
-  animate: { opacity: 1, y: 0, scale: 1 },
-  transition: { duration: 0.85, delay, ease: EASE },
-});
+const cardStyle = (delay) => ({ "--hd": `${delay}s` });
 
 export default function HeroVisual() {
   const mx = useMotionValue(0);
@@ -46,7 +37,7 @@ export default function HeroVisual() {
       <div className="hv">
         <div className="hv__glow" />
         <m.div className="hv__stage" style={{ rotateX, rotateY }}>
-          <m.div data-reveal className="hd hd--book" {...rise(0.15)}>
+          <div className="hd hd--book hv-card-in" style={cardStyle(0.15)}>
             <svg className="stamp__ring" viewBox="0 0 100 100">
               <defs>
                 <path id="stamp-circle" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0" />
@@ -63,9 +54,9 @@ export default function HeroVisual() {
             <span className="hd__title">PASSPORT</span>
             <span className="hd__hi" lang="hi">पासपोर्ट</span>
             <span className="hd__mrz">{"P<IND<<<<<<<<<<<<<<<<"}</span>
-          </m.div>
+          </div>
 
-          <m.div data-reveal className="hd hd--pan" {...rise(0.3)}>
+          <div className="hd hd--pan hv-card-in" style={cardStyle(0.3)}>
             <div className="hd__top">
               <span className="hd__label">PAN CARD</span>
               <IdCard />
@@ -75,9 +66,9 @@ export default function HeroVisual() {
               <span className="hd__lines"><i /><i /><i /></span>
             </div>
             <span className="hd__chip" />
-          </m.div>
+          </div>
 
-          <m.div data-reveal className="hd hd--dl" {...rise(0.45)}>
+          <div className="hd hd--dl hv-card-in" style={cardStyle(0.45)}>
             <div className="hd__top">
               <span className="hd__label">DRIVING LICENCE</span>
               <Icon name="Car" />
@@ -87,29 +78,29 @@ export default function HeroVisual() {
               <span className="hd__lines"><i /><i /><i /></span>
             </div>
             <span className="hd__chip" />
-          </m.div>
+          </div>
 
-          <m.div data-reveal className="hv__checklist" {...rise(0.6)}>
+          <div className="hv__checklist hv-card-in" style={cardStyle(0.6)}>
             <p className="hv__card-title">
               <ClipboardCheck />
               Aapki document checklist
             </p>
-            <m.div variants={list} initial="hidden" animate="show" className="hv__rows">
-              {CHECKLIST.map((t) => (
-                <m.div key={t} className="hv__row" variants={row}>
-                  <m.span className="hv__tick" variants={tick}>
+            <div className="hv__rows">
+              {CHECKLIST.map((t, i) => (
+                <div key={t} className="hv__row hv-row-in" style={{ "--hd": `${1.1 + i * 0.16}s` }}>
+                  <span className="hv__tick hv-tick-in" style={{ "--hd": `${1.15 + i * 0.16}s` }}>
                     <Check strokeWidth={3} />
-                  </m.span>
+                  </span>
                   {t}
-                </m.div>
+                </div>
               ))}
-            </m.div>
-          </m.div>
+            </div>
+          </div>
 
-          <m.div data-reveal className="hv__chat" {...rise(0.75)}>
+          <div className="hv__chat hv-card-in" style={cardStyle(0.75)}>
             <span className="wa"><WhatsAppIcon /></span>
             <span>Hello, I need guidance with a passport application in Dewas.</span>
-          </m.div>
+          </div>
         </m.div>
       </div>
     </div>
