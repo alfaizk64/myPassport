@@ -271,7 +271,7 @@ export const PAGES = [
     label: "Passport renewal and re-issue",
     title: "Passport Renewal and Re-issue in Dewas",
     description:
-      "Passport renew kaise karein? Dewas mein expiring, expired, lost ya damaged passport aur naam ya address change ke liye checklist aur appointment madad.",
+      "Passport renewal or re-issue in Dewas? Document checklist, application form aur appointment guidance ke liye Iqbal Khan Passport Consultant se madad lein.",
     h1: "Passport renewal and re-issue in Dewas",
     hindi: "देवास में पासपोर्ट रिन्यूअल और री-इश्यू में मार्गदर्शन",
     intro: [
